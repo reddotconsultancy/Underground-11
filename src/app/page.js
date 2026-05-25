@@ -716,7 +716,7 @@ export default function Home() {
       {/* SECTION 1: HERO */}
       <header className="hero" id="home">
         <video className="hero-video" autoPlay loop muted playsInline>
-          <source src="/assets/coffee_spill.mp4" type="video/mp4" />
+          <source src="/assets/hero_underground.mp4" type="video/mp4" />
         </video>
 
         <div className="hero-bg"></div>
