@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://underground-11.vercel.app/sitemap.xml

@@ -45,5 +45,6 @@ next-env.d.ts
 /scratch/
 *.py
 *.txt
+!public/robots.txt
 step_*
 /edits_summary.txt
