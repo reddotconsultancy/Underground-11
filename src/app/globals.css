@@ -22,7 +22,7 @@
     --border:         rgba(255,255,255,0.06);
     --border-accent:  rgba(226,178,88,0.25);
 
-    --font-display:   'Bebas Neue', sans-serif;
+    --font-display:   'Cinzel', serif;
     --font-serif:     'Playfair Display', serif;
     --font-body:      'Inter', sans-serif;
     --font-dm:        'DM Serif Display', serif;
@@ -148,10 +148,12 @@ body.hover-interactive .custom-cursor-glow {
 }
 
 .nav-logo-text {
-    font-family: var(--font-serif);
-    font-size: 1rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
     color: var(--txt-primary);
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 .nav-logo-text em { font-style: italic; color: var(--accent); }
 
@@ -397,9 +399,10 @@ body.hover-interactive .custom-cursor-glow {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.6rem, 9vw, 8rem);
-    letter-spacing: 0.05em;
-    line-height: 0.92;
+    font-size: clamp(2.2rem, 8vw, 6.5rem);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.1;
     color: var(--txt-primary);
     margin-bottom: 8px;
 }
@@ -1345,4 +1348,118 @@ body.hover-interactive .custom-cursor-glow {
 @media (hover: none) {
     body { cursor: default; }
     .custom-cursor, .custom-cursor-glow { display: none; }
+}
+
+/* ─── 14. CLIENT REVIEWS SECTION ─── */
+.reviews-section {
+    padding: 120px 40px 100px;
+    background: var(--bg-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+.review-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    position: relative;
+    transition: border-color var(--transition-med), transform var(--transition-med), box-shadow var(--transition-med);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.review-card:hover {
+    border-color: var(--border-accent);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(226,178,88,0.05);
+}
+
+.review-quote-icon {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: rgba(226, 178, 88, 0.05);
+    font-family: var(--font-serif);
+    line-height: 1;
+}
+
+.review-stars {
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 4px;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: var(--txt-secondary);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.review-avatar-placeholder {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-dim), var(--accent));
+    border: 1.5px solid var(--border-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    color: var(--bg-main);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.review-author-info h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--txt-primary);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.review-author-info span {
+    font-size: 0.72rem;
+    color: var(--txt-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 991px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }

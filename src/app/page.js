@@ -381,6 +381,22 @@ export default function Home() {
         );
       });
 
+      // 9b. REVIEWS SECTION — Reveal Animations
+      document.querySelectorAll(".review-card").forEach((card, i) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 30 },
+          {
+            opacity: 1,
+            y: 0,
+            scrollTrigger: { trigger: card, start: "top 88%", scrub: false },
+            duration: 0.6,
+            delay: i * 0.1,
+            ease: "power2.out",
+          }
+        );
+      });
+
       // 11. SCROLL INDICATOR FADE
       const scrollInd = document.getElementById("scroll-indicator");
       if (scrollInd) {
@@ -673,6 +689,9 @@ export default function Home() {
               <a href="#gallery">Gallery</a>
             </li>
             <li>
+              <a href="#reviews">Reviews</a>
+            </li>
+            <li>
               <a href="#visit">Visit</a>
             </li>
           </ul>
@@ -704,6 +723,9 @@ export default function Home() {
             </li>
             <li>
               <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="#reviews">Reviews</a>
             </li>
             <li>
               <a href="#visit">Visit</a>
@@ -826,7 +848,6 @@ export default function Home() {
                   <i className="fas fa-leaf"></i> Single Origin
                 </span>
               </div>
-              <span className="product-price">₹220</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="espresso"></canvas>
@@ -877,7 +898,6 @@ export default function Home() {
                   <i className="fas fa-award"></i> Award-winning
                 </span>
               </div>
-              <span className="product-price">₹280</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="latte"></canvas>
@@ -930,7 +950,6 @@ export default function Home() {
                   <i className="fas fa-bolt"></i> Full Strength
                 </span>
               </div>
-              <span className="product-price">₹260</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="iced"></canvas>
@@ -981,7 +1000,6 @@ export default function Home() {
                   <i className="fas fa-sun"></i> Mood Lifter
                 </span>
               </div>
-              <span className="product-price">₹310</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="matcha"></canvas>
@@ -1034,7 +1052,6 @@ export default function Home() {
                   <i className="fas fa-heart"></i> Limited
                 </span>
               </div>
-              <span className="product-price">₹340</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="dessert"></canvas>
@@ -1089,7 +1106,6 @@ export default function Home() {
                   <i className="fas fa-snowflake"></i> Served Cold
                 </span>
               </div>
-              <span className="product-price">₹320</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="coldbrew"></canvas>
@@ -1282,6 +1298,85 @@ export default function Home() {
           <div className="masonry-item">
             <img src="/assets/affogato.jpg" alt="Affogato" loading="lazy" />
             <div className="masonry-caption">Affogato Hour</div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION: CLIENT REVIEWS */}
+      <section className="reviews-section" id="reviews">
+        <div className="reviews-header">
+          <span className="section-eyebrow">Reviews</span>
+          <h2 className="section-title">Client reviews</h2>
+        </div>
+
+        <div className="reviews-grid">
+          <div className="review-card">
+            <span className="review-quote-icon">“</span>
+            <div>
+              <div className="review-stars">
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+              </div>
+              <p className="review-text">
+                {"\"The late-night vibes here are unmatched. Their cold brew is easily the best in Mangaluru, and the music sets the perfect mood.\""}
+              </p>
+            </div>
+            <div className="review-author">
+              <div className="review-avatar-placeholder">AK</div>
+              <div className="review-author-info">
+                <h4>Aditya K.</h4>
+                <span>Local Guide</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="review-card">
+            <span className="review-quote-icon">“</span>
+            <div>
+              <div className="review-stars">
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+              </div>
+              <p className="review-text">
+                {"\"Underground 11 is a hidden gem. The attention to detail in their coffee and the velvet latte is incredible. An absolute must-visit!\""}
+              </p>
+            </div>
+            <div className="review-author">
+              <div className="review-avatar-placeholder">RD</div>
+              <div className="review-author-info">
+                <h4>Rhea D.</h4>
+                <span>Coffee Connoisseur</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="review-card">
+            <span className="review-quote-icon">“</span>
+            <div>
+              <div className="review-stars">
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+                <i className="fas fa-star"></i>
+              </div>
+              <p className="review-text">
+                {"\"A perfect place to unwind. Love the aesthetic, the silent lofi beats, and the strawberry caramel cake. My favorite late-night spot.\""}
+              </p>
+            </div>
+            <div className="review-author">
+              <div className="review-avatar-placeholder">NS</div>
+              <div className="review-author-info">
+                <h4>Nikhil S.</h4>
+                <span>Regular Customer</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
