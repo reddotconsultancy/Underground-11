@@ -1327,7 +1327,7 @@ body.hover-interactive .custom-cursor-glow {
     .product-copy { grid-column: 1; grid-row: 2; z-index: 5; }
     .product-scene { grid-column: 1; grid-row: 1; height: 40vh; }
     .product-quote { display: none; }
-    .showcase-sidebar { left: 14px; }
+    .showcase-sidebar { left: auto; right: 16px; }
     .product-slide::before { top: 90px; left: 24px; right: 24px; }
     .product-slide::after  { bottom: 40px; left: 24px; right: 24px; }
     .product-img-wrap { height: 36vh; max-width: 280px; }
@@ -1349,6 +1349,7 @@ body.hover-interactive .custom-cursor-glow {
     .footer-links { gap: 16px; }
     .product-title { font-size: 2.8rem; }
     .showcase-section { height: 100vh; }
+    .section-title { font-size: clamp(1.6rem, 7.5vw, 2.4rem) !important; }
 }
 
 /* Mobile cursor */
