@@ -744,7 +744,9 @@ export default function Home() {
         <div className="hero-bg"></div>
 
         <div className="hero-content">
-
+          <div className="hero-eyebrow">
+            <span>Specialty Coffee &amp; Late-Night Lounge</span>
+          </div>
 
           <h1 className="hero-title">
             <span className="hero-title-main">Underground 11</span>
@@ -828,10 +830,11 @@ export default function Home() {
             ></div>
             <div className="product-copy product-info-card">
               <span className="product-eyebrow">Signature Pour</span>
+              <span className="product-num">01 //</span>
               <h2 className="product-title">
                 Underground
                 <br />
-                Espresso
+                <em>Espresso</em>
               </h2>
               <p className="product-sub">
                 Triple-ristretto, aged 24h, served in hand-blown glass with
@@ -878,10 +881,11 @@ export default function Home() {
             <div className="slide-bg"></div>
             <div className="product-copy product-info-card">
               <span className="product-eyebrow">House Favourite</span>
+              <span className="product-num">02 //</span>
               <h2 className="product-title">
                 Velvet
                 <br />
-                Latte
+                <em>Latte</em>
               </h2>
               <p className="product-sub">
                 Silky microfoam, oat milk base, hand-pulled espresso — served in
@@ -928,12 +932,11 @@ export default function Home() {
             <div className="slide-bg"></div>
             <div className="product-copy product-info-card">
               <span className="product-eyebrow">Late Night Essential</span>
+              <span className="product-num">03 //</span>
               <h2 className="product-title">
-                Midnight
+                Midnight Iced
                 <br />
-                Iced
-                <br />
-                Americano
+                <em>Americano</em>
               </h2>
               <p className="product-sub">
                 Cold-diluted espresso, hand-chipped ice, served in a 400ml
@@ -980,10 +983,11 @@ export default function Home() {
             <div className="slide-bg"></div>
             <div className="product-copy product-info-card">
               <span className="product-eyebrow">Zen Ritual</span>
+              <span className="product-num">04 //</span>
               <h2 className="product-title">
                 Matcha
                 <br />
-                Glow
+                <em>Glow</em>
               </h2>
               <p className="product-sub">
                 Ceremonial grade matcha, oat milk whip, gold flake — handcrafted
@@ -1030,12 +1034,11 @@ export default function Home() {
             <div className="slide-bg"></div>
             <div className="product-copy product-info-card">
               <span className="product-eyebrow">Patisserie</span>
+              <span className="product-num">05 //</span>
               <h2 className="product-title">
-                Strawberry
+                Strawberry Caramel
                 <br />
-                Caramel
-                <br />
-                Cake
+                <em>Cake</em>
               </h2>
               <p className="product-sub">
                 House-baked daily. Layers of caramel sponge, fresh strawberry
@@ -1086,10 +1089,11 @@ export default function Home() {
             <div className="slide-bg"></div>
             <div className="product-copy product-info-card">
               <span className="product-eyebrow">Signature Brew</span>
+              <span className="product-num">06 //</span>
               <h2 className="product-title">
                 Cold Brew
                 <br />
-                No. 11
+                <em>No. 11</em>
               </h2>
               <p className="product-sub">
                 18-hour slow-steeped cold brew, strained twice, served with mint

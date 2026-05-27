@@ -389,17 +389,22 @@ body.hover-interactive .custom-cursor-glow {
 }
 
 .hero-eyebrow {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    margin-bottom: 28px;
-    font-size: 0.68rem;
-    letter-spacing: 0.22em;
+    gap: 10px;
+    margin-bottom: 24px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--txt-muted);
+    color: var(--accent);
+    padding: 6px 16px;
+    border: 1px solid var(--border-accent);
+    border-radius: 30px;
+    background: rgba(226, 178, 88, 0.03);
 }
-@media (min-width: 992px) { .hero-eyebrow { justify-content: flex-start; } }
+@media (min-width: 992px) { .hero-eyebrow { display: inline-flex; } }
 
 .eyebrow-line {
     display: block;
@@ -419,6 +424,7 @@ body.hover-interactive .custom-cursor-glow {
     text-transform: none;
     color: var(--txt-primary);
     margin-bottom: 12px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
 }
 .hero-title-main {
     white-space: nowrap;
@@ -701,6 +707,16 @@ body.hover-interactive .custom-cursor-glow {
     font-style: italic;
     font-weight: 400;
     color: var(--accent);
+}
+.product-num {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    margin-bottom: 12px;
+    opacity: 0.85;
 }
 .product-sub {
     font-size: 0.88rem;
@@ -1053,15 +1069,17 @@ body.hover-interactive .custom-cursor-glow {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: var(--font-display);
-    font-size: clamp(3.5rem, 10vw, 8rem);
+    font-size: clamp(4.5rem, 15vw, 12rem);
     font-style: italic;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    color: rgba(255,255,255,0.015);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.025);
     white-space: nowrap;
     pointer-events: none;
     user-select: none;
     z-index: 0;
+    text-transform: uppercase;
 }
 
 .visit-inner {
@@ -1423,12 +1441,14 @@ body.hover-interactive .custom-cursor-glow {
 
 .review-quote-icon {
     position: absolute;
-    top: 25px;
+    top: 15px;
     right: 30px;
-    font-size: 2.5rem;
-    color: rgba(226, 178, 88, 0.05);
+    font-size: 5rem;
+    color: rgba(226, 178, 88, 0.04);
     font-family: var(--font-serif);
+    font-style: italic;
     line-height: 1;
+    pointer-events: none;
 }
 
 .review-stars {
