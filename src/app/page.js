@@ -572,7 +572,7 @@ export default function Home() {
     let vibeOn = false;
     let handleVibeClick;
     if (vibeBtn && vibeAudio) {
-      vibeAudio.volume = 0.14;
+      vibeAudio.volume = 0.45;
       handleVibeClick = () => {
         vibeOn = !vibeOn;
         if (vibeOn) {
