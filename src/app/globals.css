@@ -22,7 +22,7 @@
     --border:         rgba(255,255,255,0.06);
     --border-accent:  rgba(226,178,88,0.25);
 
-    --font-display:   'Cinzel', serif;
+    --font-display:   'Bodoni Moda', serif;
     --font-serif:     'Playfair Display', serif;
     --font-body:      'Inter', sans-serif;
     --font-dm:        'DM Serif Display', serif;
@@ -149,13 +149,13 @@ body.hover-interactive .custom-cursor-glow {
 
 .nav-logo-text {
     font-family: var(--font-display);
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 700;
     color: var(--txt-primary);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
-.nav-logo-text em { font-style: italic; color: var(--accent); }
+.nav-logo-text em { font-family: var(--font-display); font-style: italic; color: var(--accent); }
 
 .nav-links {
     display: flex;
@@ -313,9 +313,13 @@ body.hover-interactive .custom-cursor-glow {
 .section-title {
     font-family: var(--font-display);
     font-size: clamp(2.8rem, 6vw, 5rem);
-    letter-spacing: 0.04em;
-    line-height: 0.95;
-    color: var(--txt-primary);
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    line-height: 1.0;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--txt-primary) 40%, var(--txt-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .section-sub {
     margin-top: 16px;
@@ -400,15 +404,18 @@ body.hover-interactive .custom-cursor-glow {
 .hero-title {
     font-family: var(--font-display);
     font-size: clamp(2.2rem, 8vw, 6.5rem);
-    font-weight: 700;
-    letter-spacing: 0.03em;
-    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 1.05;
+    text-transform: uppercase;
     color: var(--txt-primary);
     margin-bottom: 8px;
 }
-
 .hero-title-main {
     white-space: nowrap;
+    background: linear-gradient(135deg, var(--txt-primary) 30%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .hero-title-serif {
     font-family: var(--font-serif);
