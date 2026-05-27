@@ -1137,7 +1137,7 @@ export default function Home() {
       <section className="atmosphere-section" id="atmosphere">
         <div className="atm-header">
           <span className="section-eyebrow">The Space</span>
-          <h2 className="section-title">Feel the Underground</h2>
+          <h2 className="section-title">Feel the <em>Underground</em></h2>
           <p className="section-sub">
             Where baristas become artists and every corner tells a story.
           </p>
@@ -1215,7 +1215,7 @@ export default function Home() {
       <section className="gallery-section" id="gallery">
         <div className="gallery-header">
           <span className="section-eyebrow">Life at Underground</span>
-          <h2 className="section-title">Gallery</h2>
+          <h2 className="section-title">Our <em>Gallery</em></h2>
         </div>
 
         <div className="masonry-grid" id="masonry-grid">
@@ -1306,7 +1306,7 @@ export default function Home() {
       <section className="reviews-section" id="reviews">
         <div className="reviews-header">
           <span className="section-eyebrow">Reviews</span>
-          <h2 className="section-title">Client reviews</h2>
+          <h2 className="section-title">Client <em>Reviews</em></h2>
         </div>
 
         <div className="reviews-grid">
@@ -1391,7 +1391,7 @@ export default function Home() {
             <h2 className="section-title visit-title">
               Come
               <br />
-              Visit Us
+              <em>Visit Us</em>
             </h2>
           </div>
 
@@ -1460,16 +1460,12 @@ export default function Home() {
               <h3 className="visit-card-title">Hours</h3>
               <div className="hours-list">
                 <div className="hours-row">
-                  <span>Mon – Thu</span>
-                  <span>9 AM – 1 AM</span>
+                  <span>Tue – Sun</span>
+                  <span>10:00 AM – 8:30 PM</span>
                 </div>
                 <div className="hours-row">
-                  <span>Fri – Sat</span>
-                  <span>9 AM – 3 AM</span>
-                </div>
-                <div className="hours-row">
-                  <span>Sunday</span>
-                  <span>10 AM – 11 PM</span>
+                  <span>Monday</span>
+                  <span style={{ color: "var(--accent)" }}>Closed</span>
                 </div>
               </div>
             </div>

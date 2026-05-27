@@ -22,10 +22,10 @@
     --border:         rgba(255,255,255,0.06);
     --border-accent:  rgba(226,178,88,0.25);
 
-    --font-display:   'Bodoni Moda', serif;
-    --font-serif:     'Playfair Display', serif;
-    --font-body:      'Inter', sans-serif;
-    --font-dm:        'DM Serif Display', serif;
+    --font-display:   "Times New Roman", Times, Baskerville, Georgia, serif;
+    --font-serif:     "Times New Roman", Times, Baskerville, Georgia, serif;
+    --font-body:      "Times New Roman", Times, Baskerville, Georgia, serif;
+    --font-dm:        "Times New Roman", Times, Baskerville, Georgia, serif;
 
     --radius-sm:      6px;
     --radius-md:      12px;
@@ -50,7 +50,8 @@ body {
     background-color: var(--bg-main);
     color: var(--txt-primary);
     font-family: var(--font-body);
-    line-height: 1.6;
+    line-height: 1.75;
+    letter-spacing: 0.015em;
     overflow-x: hidden;
     cursor: none;
 }
@@ -149,13 +150,13 @@ body.hover-interactive .custom-cursor-glow {
 
 .nav-logo-text {
     font-family: var(--font-display);
-    font-size: 1.0rem;
-    font-weight: 700;
+    font-size: 1.05rem;
+    font-weight: 500;
     color: var(--txt-primary);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
 }
-.nav-logo-text em { font-family: var(--font-display); font-style: italic; color: var(--accent); }
+.nav-logo-text em { font-family: var(--font-display); font-style: italic; font-weight: 400; color: var(--accent); }
 
 .nav-links {
     display: flex;
@@ -163,8 +164,9 @@ body.hover-interactive .custom-cursor-glow {
 }
 
 .nav-links a {
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    font-weight: 500;
     text-transform: uppercase;
     color: var(--txt-secondary);
     transition: color var(--transition-fast);
@@ -262,9 +264,9 @@ body.hover-interactive .custom-cursor-glow {
     padding: 14px 30px;
     background: var(--accent);
     color: var(--bg-main);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     border-radius: 40px;
     transition: var(--transition-med);
@@ -290,8 +292,9 @@ body.hover-interactive .custom-cursor-glow {
     padding: 14px 28px;
     border: 1px solid var(--border-accent);
     color: var(--accent);
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    font-weight: 600;
     text-transform: uppercase;
     border-radius: 40px;
     transition: var(--transition-med);
@@ -312,21 +315,27 @@ body.hover-interactive .custom-cursor-glow {
 }
 .section-title {
     font-family: var(--font-display);
-    font-size: clamp(2.8rem, 6vw, 5rem);
-    font-weight: 800;
-    letter-spacing: 0.03em;
-    line-height: 1.0;
-    text-transform: uppercase;
-    background: linear-gradient(135deg, var(--txt-primary) 40%, var(--txt-secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    text-transform: none;
+    color: var(--txt-primary);
+}
+.section-title em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: -0.01em;
 }
 .section-sub {
     margin-top: 16px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--txt-secondary);
-    max-width: 480px;
-    line-height: 1.7;
+    max-width: 520px;
+    line-height: 1.8;
+    letter-spacing: 0.015em;
 }
 
 /* ─── 7. HERO SECTION ─── */
@@ -403,24 +412,25 @@ body.hover-interactive .custom-cursor-glow {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(1.8rem, 6.5vw, 5.2rem);
-    font-weight: 800;
-    letter-spacing: 0.04em;
+    font-size: clamp(2.2rem, 7.5vw, 6rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
     line-height: 1.05;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--txt-primary);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 .hero-title-main {
     white-space: nowrap;
-    background: linear-gradient(135deg, var(--txt-primary) 30%, var(--accent) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--txt-primary);
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: initial;
 }
 .hero-title-serif {
     font-family: var(--font-serif);
     font-style: italic;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--accent);
 }
 
@@ -678,18 +688,25 @@ body.hover-interactive .custom-cursor-glow {
 
 .product-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 5.5vw, 5.5rem);
-    letter-spacing: 0.04em;
-    line-height: 0.92;
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
     color: var(--txt-primary);
     margin-bottom: 20px;
     clip-path: inset(0 0 100% 0);
 }
-
+.product-title em {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+}
 .product-sub {
     font-size: 0.88rem;
     color: var(--txt-secondary);
-    line-height: 1.75;
+    line-height: 1.8;
+    letter-spacing: 0.015em;
     margin-bottom: 24px;
     max-width: 300px;
     opacity: 0;
@@ -1036,9 +1053,11 @@ body.hover-interactive .custom-cursor-glow {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: var(--font-display);
-    font-size: clamp(4rem, 10vw, 10rem);
-    letter-spacing: 0.06em;
-    color: rgba(255,255,255,0.025);
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.015);
     white-space: nowrap;
     pointer-events: none;
     user-select: none;
@@ -1091,7 +1110,8 @@ body.hover-interactive .custom-cursor-glow {
 .visit-card-title {
     font-family: var(--font-display);
     font-size: 1.4rem;
-    letter-spacing: 0.06em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     color: var(--txt-primary);
     margin-bottom: 14px;
 }
@@ -1422,7 +1442,8 @@ body.hover-interactive .custom-cursor-glow {
 .review-text {
     font-size: 0.95rem;
     color: var(--txt-secondary);
-    line-height: 1.7;
+    line-height: 1.8;
+    letter-spacing: 0.015em;
     font-style: italic;
     margin-bottom: 30px;
 }
@@ -1451,11 +1472,12 @@ body.hover-interactive .custom-cursor-glow {
 
 .review-author-info h4 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
     color: var(--txt-primary);
     margin-bottom: 2px;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.12em;
 }
 
 .review-author-info span {
