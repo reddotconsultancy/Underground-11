@@ -763,7 +763,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="hero-subtitle">
-            Specialty coffee, signature desserts &amp; late-night cafe energy.
+            Specialty coffee, house-baked pastries, curated lofi night vibes music &amp; late-night cafe energy.
           </p>
           <div className="hero-ctas">
             <a href="#menu" className="btn-primary" id="hero-btn-menu">
@@ -1143,7 +1143,7 @@ export default function Home() {
           <span className="section-eyebrow">The Space</span>
           <h2 className="section-title">Feel the <em>Underground</em></h2>
           <p className="section-sub">
-            Where baristas become artists and every corner tells a story.
+            Where baristas become artists, fresh pastries satisfy your late-night cravings, and curated lofi night vibes music sets the perfect cafe mood.
           </p>
         </div>
 
