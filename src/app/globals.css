@@ -149,10 +149,10 @@ body.hover-interactive .custom-cursor-glow {
 
 .nav-logo-text {
     font-family: var(--font-display);
-    font-size: 1.15rem;
+    font-size: 1.0rem;
     font-weight: 700;
     color: var(--txt-primary);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
 }
 .nav-logo-text em { font-family: var(--font-display); font-style: italic; color: var(--accent); }
@@ -403,7 +403,7 @@ body.hover-interactive .custom-cursor-glow {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.2rem, 8vw, 6.5rem);
+    font-size: clamp(1.8rem, 6.5vw, 5.2rem);
     font-weight: 800;
     letter-spacing: 0.04em;
     line-height: 1.05;
@@ -1036,7 +1036,7 @@ body.hover-interactive .custom-cursor-glow {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: var(--font-display);
-    font-size: clamp(6rem, 14vw, 14rem);
+    font-size: clamp(4rem, 10vw, 10rem);
     letter-spacing: 0.06em;
     color: rgba(255,255,255,0.025);
     white-space: nowrap;

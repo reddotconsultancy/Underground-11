@@ -848,7 +848,6 @@ export default function Home() {
                   <i className="fas fa-leaf"></i> Single Origin
                 </span>
               </div>
-              <span className="product-price">₹220</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="espresso"></canvas>
@@ -899,7 +898,6 @@ export default function Home() {
                   <i className="fas fa-award"></i> Award-winning
                 </span>
               </div>
-              <span className="product-price">₹280</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="latte"></canvas>
@@ -952,7 +950,6 @@ export default function Home() {
                   <i className="fas fa-bolt"></i> Full Strength
                 </span>
               </div>
-              <span className="product-price">₹260</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="iced"></canvas>
@@ -1003,7 +1000,6 @@ export default function Home() {
                   <i className="fas fa-sun"></i> Mood Lifter
                 </span>
               </div>
-              <span className="product-price">₹310</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="matcha"></canvas>
@@ -1056,7 +1052,6 @@ export default function Home() {
                   <i className="fas fa-heart"></i> Limited
                 </span>
               </div>
-              <span className="product-price">₹340</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="dessert"></canvas>
@@ -1111,7 +1106,6 @@ export default function Home() {
                   <i className="fas fa-snowflake"></i> Served Cold
                 </span>
               </div>
-              <span className="product-price">₹320</span>
             </div>
             <div className="product-scene product-image-wrapper">
               <canvas className="particle-canvas" data-type="coldbrew"></canvas>
