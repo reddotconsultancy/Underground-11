@@ -1400,12 +1400,12 @@ body.hover-interactive .custom-cursor-glow {
     height: 100%;
     display: block;
     border-radius: inherit;
-    opacity: 0.85;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
 .visit-card-map:hover iframe {
-    opacity: 0.95;
+    opacity: 1;
 }
 
 /* Gold pulsing map pin overlay in the exact center */

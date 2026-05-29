@@ -1713,14 +1713,13 @@ export default function Home() {
             {/* Premium Map Card */}
             <div className="visit-card visit-card-map">
               <div className="map-embed-wrap">
-                {/* Dark-styled Google Maps using exact Cafe location */}
+                {/* Google Maps in Day Mode */}
                 <iframe
                   src="https://maps.google.com/maps?q=UNDERGROUND+11+Coffee+Bar,+Ground+Floor,+Mindspace+Building,+Airport+Road,+Yeyyadi,+Mangaluru&t=&z=17&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{
-                    border: 0,
-                    filter: "grayscale(1) invert(1) hue-rotate(200deg) brightness(0.75) contrast(0.95) saturate(0.5)"
+                    border: 0
                   }}
                   allowFullScreen=""
                   loading="lazy"
