@@ -1334,6 +1334,46 @@ export default function Home() {
             />
             <div className="masonry-caption">Double Chocolate Tart</div>
           </div>
+          <div className="masonry-item">
+            <img
+              src="/assets/gal_matcha_juice.jpg"
+              alt="Signature Layered Matcha"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Signature Layered Matcha</div>
+          </div>
+          <div className="masonry-item masonry-tall">
+            <img
+              src="/assets/gal_interior.jpg"
+              alt="Lounge Vibe"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Lounge Vibe</div>
+          </div>
+          <div className="masonry-item">
+            <img
+              src="/assets/gal_irish_coffee.jpg"
+              alt="Signature Irish Coffee"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Signature Irish Coffee</div>
+          </div>
+          <div className="masonry-item masonry-tall">
+            <img
+              src="/assets/gal_blueberry_tart.jpg"
+              alt="Blueberry Chocolate Tart"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Blueberry Chocolate Tart</div>
+          </div>
+          <div className="masonry-item">
+            <img
+              src="/assets/gal_cookies_alt.jpg"
+              alt="Underground Treats"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Underground Treats</div>
+          </div>
         </div>
       </section>
 
