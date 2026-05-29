@@ -1715,7 +1715,7 @@ export default function Home() {
               <div className="map-embed-wrap">
                 {/* Dark-styled Google Maps using exact Cafe location */}
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.4326557476834!2d74.8519412!3d12.9056157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b1d4e78a6ff%3A0xde1c1c73a4b0d0c3!2sUnderground%2011%20Coffee%20Bar!5e0!3m2!1sen!2sin!4v1716960000000!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=UNDERGROUND+11+Coffee+Bar,+Ground+Floor,+Mindspace+Building,+Airport+Road,+Yeyyadi,+Mangaluru&t=&z=17&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{
