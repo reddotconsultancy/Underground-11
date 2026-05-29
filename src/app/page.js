@@ -1170,17 +1170,58 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="atm-band" data-speed="1.04">
+          <div className="atm-band" data-speed="1.05">
             <div
               className="atm-band-img"
-              style={{ backgroundImage: "url('/assets/atm_shelves.jpg')" }}
+              style={{ backgroundImage: "url('/assets/atm_barista_wide.jpg')" }}
             ></div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
               <div className="atm-amber-leak"></div>
             </div>
             <div className="atm-band-caption">
+              <span>The Espresso Station</span>
+            </div>
+          </div>
+
+          <div className="atm-band atm-band-right" data-speed="0.95">
+            <div
+              className="atm-band-img"
+              style={{ backgroundImage: "url('/assets/atm_shelves.jpg')" }}
+            ></div>
+            <div className="atm-band-overlay">
+              <div className="atm-led-line"></div>
+            </div>
+            <div className="atm-band-caption">
               <span>The Brew Shelves</span>
+            </div>
+          </div>
+
+          <div className="atm-band" data-speed="1.04">
+            <div
+              className="atm-band-img"
+              style={{ backgroundImage: "url('/assets/atm_barista_corner.jpg')" }}
+            ></div>
+            <div className="atm-band-overlay">
+              <div className="atm-led-line"></div>
+              <div className="atm-amber-leak"></div>
+            </div>
+            <div className="atm-band-caption">
+              <span>The Barista Corner</span>
+            </div>
+          </div>
+
+          <div className="atm-band atm-band-right" data-speed="0.96">
+            <div
+              className="atm-band-img"
+              style={{ backgroundImage: "url('/assets/atm_barista_back.jpg')" }}
+            ></div>
+            <div className="atm-band-overlay">
+              <div className="atm-led-line"></div>
+              <div className="atm-glass-reflection"></div>
+            </div>
+            <div className="atm-band-caption">
+              <span>Espresso Craftsmanship</span>
             </div>
           </div>
         </div>
