@@ -1414,6 +1414,46 @@ export default function Home() {
             />
             <div className="masonry-caption">Cafe Corner</div>
           </div>
+          <div className="masonry-item">
+            <img
+              src="/assets/gal_three_coffees.jpg"
+              alt="A Coffee for Everyone"
+              loading="lazy"
+            />
+            <div className="masonry-caption">A Coffee for Everyone</div>
+          </div>
+          <div className="masonry-item masonry-tall">
+            <img
+              src="/assets/gal_caramel_cake.jpg"
+              alt="Biscoff Cheesecake"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Biscoff Cheesecake</div>
+          </div>
+          <div className="masonry-item">
+            <img
+              src="/assets/gal_flat_white.jpg"
+              alt="Flat White Close-up"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Flat White Close-up</div>
+          </div>
+          <div className="masonry-item masonry-tall">
+            <img
+              src="/assets/gal_stools_view.jpg"
+              alt="Window Seating"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Window Seating</div>
+          </div>
+          <div className="masonry-item">
+            <img
+              src="/assets/gal_workspace_vibe.jpg"
+              alt="Workspace Ambience"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Workspace Ambience</div>
+          </div>
         </div>
       </section>
 
