@@ -92,6 +92,7 @@ export default function Home() {
         "rgba(226,178,88,0.14)", // rum barrel — smoky gold
         "rgba(92,173,106,0.15)", // strawberry matcha — matcha green
         "rgba(240,230,200,0.13)", // vietnamese latte — condensed milk cream
+        "rgba(120,200,120,0.14)", // coconut cloud matcha — cool coconut matcha green
       ];
 
       slides.forEach((s, i) => {
@@ -811,7 +812,7 @@ export default function Home() {
                 01
               </span>
               <span className="counter-sep">/</span>
-              <span className="counter-total">05</span>
+              <span className="counter-total">06</span>
             </div>
           </div>
 
@@ -1070,6 +1071,60 @@ export default function Home() {
                 {"\"SWEET\""}
                 <br />
                 {"\"SILKY\""}
+              </span>
+            </div>
+          </div>
+
+          {/* Product 6 — Coconut Cloud Matcha */}
+          <div
+            className="product-slide"
+            data-index="5"
+            data-product="matcha"
+          >
+            <div className="slide-bg"></div>
+            <div className="product-copy product-info-card">
+              <span className="product-eyebrow">Zen Special</span>
+              <span className="product-num">06 //</span>
+              <h2 className="product-title">
+                Coconut Cloud
+                <br />
+                <em>Matcha</em>
+              </h2>
+              <p className="product-sub">
+                Clean, refreshing coconut water layered with a sweet, fluffy vanilla cold foam cloud and topped with a vibrant, whisked Uji ceremonial grade matcha layer.
+              </p>
+              <div className="product-details">
+                <span className="detail-item">
+                  <i className="fas fa-leaf"></i> Ceremonial Matcha
+                </span>
+                <span className="detail-item">
+                  <i className="fas fa-cloud"></i> Vanilla Cloud Foam
+                </span>
+                <span className="detail-item">
+                  <i className="fas fa-tint"></i> Pure Coconut Water
+                </span>
+              </div>
+            </div>
+            <div className="product-scene product-image-wrapper">
+              <canvas className="particle-canvas" data-type="matcha"></canvas>
+              <div className="product-img-wrap">
+                <img
+                  src="/assets/coconut_matcha.jpg"
+                  alt="Coconut Cloud Matcha"
+                  className="product-img"
+                  draggable="false"
+                />
+                <div className="product-light-left"></div>
+                <div className="product-light-right"></div>
+              </div>
+            </div>
+            <div className="product-quote">
+              <span className="quote-big">
+                {"\"CLEAN\""}
+                <br />
+                {"\"LIGHT\""}
+                <br />
+                {"\"REFRESHING\""}
               </span>
             </div>
           </div>
