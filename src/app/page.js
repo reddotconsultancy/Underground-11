@@ -1710,6 +1710,51 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Premium Map Card */}
+            <div className="visit-card visit-card-map">
+              <div className="map-embed-wrap">
+                {/* Dark-styled Google Maps using exact coordinates */}
+                <iframe
+                  src="https://maps.google.com/maps?q=12.923483,74.862412&z=16&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{
+                    border: 0,
+                    filter: "grayscale(1) invert(1) hue-rotate(200deg) brightness(0.75) contrast(0.95) saturate(0.5)"
+                  }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Underground 11 Coffee Bar Location"
+                ></iframe>
+
+                {/* Animated gold pin centered on location */}
+                <div className="map-overlay-pin">
+                  <div className="map-pin-anim">
+                    <i className="fas fa-map-marker-alt map-pin"></i>
+                    <div className="map-ping"></div>
+                  </div>
+                </div>
+
+                {/* Frosted glass address badge at bottom */}
+                <div className="map-address-badge">
+                  <div className="map-badge-row">
+                    <i className="fas fa-location-dot map-badge-icon"></i>
+                    <div>
+                      <span className="map-badge-name">UNDERGROUND 11</span>
+                      <span className="map-badge-addr">Airport Road, Yeyyadi, Mangaluru</span>
+                    </div>
+                  </div>
+                  <a
+                    href="https://maps.google.com/?q=12.923483,74.862412"
+                    target="_blank"
+                    className="map-badge-link"
+                  >
+                    Get Directions <i className="fas fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
 
           </div>
         </div>

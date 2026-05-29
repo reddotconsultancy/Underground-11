@@ -1371,14 +1371,24 @@ body.hover-interactive .custom-cursor-glow {
 .visit-card-map {
     padding: 0;
     overflow: hidden;
-    min-height: 280px;
+    min-height: 380px;
+    position: relative;
+    border: 1px solid rgba(226, 178, 88, 0.15);
+    background: rgba(10, 10, 10, 0.6);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.visit-card-map:hover {
+    border-color: rgba(226, 178, 88, 0.3);
+    box-shadow: 0 20px 48px rgba(226, 178, 88, 0.05), 0 16px 40px rgba(0, 0, 0, 0.7);
 }
 
 .map-embed-wrap {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 280px;
+    min-height: 380px;
     border-radius: inherit;
     overflow: hidden;
 }
@@ -1390,51 +1400,141 @@ body.hover-interactive .custom-cursor-glow {
     height: 100%;
     display: block;
     border-radius: inherit;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
 }
 
+.visit-card-map:hover iframe {
+    opacity: 0.95;
+}
+
+/* Gold pulsing map pin overlay in the exact center */
 .map-overlay-pin {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
     pointer-events: none;
     z-index: 2;
 }
 
-.map-overlay-label {
-    background: rgba(0,0,0,0.75);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(226,178,88,0.3);
-    color: var(--accent);
-    font-size: 0.65rem;
-    letter-spacing: 0.14em;
-    padding: 4px 10px;
-    border-radius: 4px;
-    white-space: nowrap;
-}
-
 .map-pin-anim {
     position: relative;
-    width: 48px; height: 48px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.map-pin { font-size: 1.8rem; color: var(--accent); }
+
+.map-pin {
+    font-size: 2rem;
+    color: var(--accent);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
 .map-ping {
     position: absolute;
-    inset: -8px;
+    inset: -6px;
     border-radius: 50%;
-    border: 2px solid rgba(226,178,88,0.4);
-    animation: ping 2s ease-out infinite;
+    border: 2px solid var(--accent);
+    animation: mapPing 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
-@keyframes ping {
-    0%   { transform: scale(0.8); opacity: 0.7; }
-    100% { transform: scale(1.6); opacity: 0; }
+
+@keyframes mapPing {
+    0%   { transform: scale(0.6); opacity: 0.8; }
+    100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* Glassmorphic Address Badge at the Bottom */
+.map-address-badge {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background: rgba(15, 15, 15, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 178, 88, 0.2);
+    padding: 14px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    z-index: 3;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.visit-card-map:hover .map-address-badge {
+    border-color: rgba(226, 178, 88, 0.35);
+    transform: translateY(-2px);
+}
+
+.map-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.map-badge-icon {
+    color: var(--accent);
+    font-size: 1.2rem;
+    background: rgba(226, 178, 88, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(226, 178, 88, 0.15);
+}
+
+.map-badge-name {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--txt-primary);
+    margin-bottom: 2px;
+}
+
+.map-badge-addr {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--txt-muted);
+    letter-spacing: 0.02em;
+}
+
+.map-badge-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent);
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.map-badge-link:hover {
+    background: #f3d49f;
+    transform: scale(1.03);
+}
+
+@media (max-width: 576px) {
+    .map-address-badge {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding: 12px;
+    }
+    .map-badge-link {
+        justify-content: center;
+    }
 }
 
 /* ─── 12. FOOTER ─── */
