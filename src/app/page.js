@@ -1696,9 +1696,8 @@ export default function Home() {
                   className="social-icon-btn insta-btn"
                   aria-label="Instagram"
                 >
-                  <span className="social-icon-glow insta-glow"></span>
                   <i className="fab fa-instagram"></i>
-                  <span className="social-icon-label">Instagram</span>
+                  <span className="social-icon-label">@underground11_coffeebar</span>
                 </a>
                 <a
                   href="https://wa.me/910000000000"
@@ -1706,9 +1705,8 @@ export default function Home() {
                   className="social-icon-btn wa-btn"
                   aria-label="WhatsApp"
                 >
-                  <span className="social-icon-glow wa-glow"></span>
                   <i className="fab fa-whatsapp"></i>
-                  <span className="social-icon-label">WhatsApp</span>
+                  <span className="social-icon-label">Chat on WhatsApp</span>
                 </a>
               </div>
             </div>
