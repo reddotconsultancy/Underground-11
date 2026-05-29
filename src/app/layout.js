@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Underground 11 Coffee Bar — Specialty Coffee, Desserts & Late-Night Vibes",
-  description: "Underground 11 Coffee Bar in Mangaluru features specialty coffee, fresh pastries, artisanal desserts, and lofi night vibes music in a premium late-night lounge space.",
+  title: "Underground 11 Coffee Bar — Specialty Coffee, Handcrafted Brews & Cozy Lofi Vibes",
+  description: "Underground 11 Coffee Bar in Mangaluru — specialty coffee, freshly baked pastries, artisanal desserts, and curated lofi music in a cozy, premium cafe space.",
   keywords: [
     "Underground 11",
     "Coffee Bar",
@@ -17,10 +17,10 @@ export const metadata = {
     "Coffee Mangaluru",
     "Pastries Mangalore",
     "Night Vibes Music Cafe",
-    "Late Night Coffee Mangaluru",
-    "Lofi Cafe Mangalore",
-    "Desserts and Pastries Mangaluru",
-    "Late Night Hanging Spot Mangaluru"
+    "Evening Cafe Mangaluru",
+    "Best Coffee Mangaluru",
+    "Cozy Cafe Mangaluru",
+    "Evening Hanging Spot Mangaluru"
   ],
   authors: [{ name: "Underground 11" }],
   creator: "Underground 11",
@@ -30,8 +30,8 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Underground 11 Coffee Bar — Specialty Coffee & Late-Night Vibes",
-    description: "Underground 11 Coffee Bar — specialty coffee, signature desserts, and premium late-night cafe energy. Explore our iconic menu and moody atmosphere.",
+    title: "Underground 11 Coffee Bar — Specialty Coffee & Handcrafted Brews",
+    description: "Underground 11 Coffee Bar — specialty coffee, signature desserts, and a cozy lofi atmosphere. Explore our iconic menu and moody underground vibes.",
     url: "https://underground-11.vercel.app",
     siteName: "Underground 11 Coffee Bar",
     locale: "en_IN",
@@ -48,7 +48,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Underground 11 Coffee Bar",
-    description: "Specialty coffee, signature desserts & premium late-night vibes in Mangaluru.",
+    description: "Specialty coffee, signature desserts & handcrafted brews in Mangaluru.",
     images: ["https://underground-11.vercel.app/assets/logo.jpg"]
   }
 };
@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
     "image": "https://underground-11.vercel.app/assets/logo.jpg",
     "@id": "https://underground-11.vercel.app",
     "url": "https://underground-11.vercel.app",
-    "servesCuisine": ["Specialty Coffee", "Artisanal Pastries", "Gourmet Desserts", "Late-Night Snacks"],
+    "servesCuisine": ["Specialty Coffee", "Artisanal Pastries", "Gourmet Desserts", "Handcrafted Brews"],
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",

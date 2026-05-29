@@ -737,7 +737,7 @@ export default function Home() {
               <a href="#visit">Visit</a>
             </li>
           </ul>
-          <p className="mobile-menu-tag">Specialty Coffee · Late Night Vibes</p>
+          <p className="mobile-menu-tag">Specialty Coffee · Handcrafted Brews · Cozy Vibes</p>
         </div>
       </div>
 
@@ -751,7 +751,7 @@ export default function Home() {
 
         <div className="hero-content">
           <div className="hero-eyebrow">
-            <span>Specialty Coffee &amp; Late-Night Vibes</span>
+            <span>Specialty Coffee &amp; Handcrafted Brews</span>
           </div>
 
           <h1 className="hero-title">
@@ -1173,7 +1173,8 @@ export default function Home() {
           <span className="section-eyebrow">The Space</span>
           <h2 className="section-title">Feel the <em>UNDERGROUND</em></h2>
           <p className="section-sub">
-            Where baristas become artists, fresh pastries satisfy your late-night cravings, and curated lofi night vibes music sets the perfect cafe mood.
+            Where baristas become artists, freshly baked pastries fuel your day, and
+            curated lofi music sets the perfect cafe mood.
           </p>
         </div>
 
@@ -1746,7 +1747,7 @@ export default function Home() {
             <p>
               UNDERGROUND 11 Coffee Bar
               <br />
-              <em>Specialty Coffee &amp; Late-Night Vibes</em>
+              <em>Specialty Coffee &amp; Handcrafted Brews</em>
             </p>
           </div>
           <div className="footer-links">
