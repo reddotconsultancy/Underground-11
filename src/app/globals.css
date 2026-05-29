@@ -1414,8 +1414,19 @@ body.hover-interactive .custom-cursor-glow {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -60%);
-    pointer-events: none;
+    pointer-events: auto;
     z-index: 2;
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.map-marker-link {
+    text-decoration: none;
+    outline: none;
+}
+
+.map-marker-link:hover .map-overlay-pin {
+    transform: translate(-50%, -60%) scale(1.25);
 }
 
 .map-pin-anim {
@@ -1428,9 +1439,14 @@ body.hover-interactive .custom-cursor-glow {
 }
 
 .map-pin {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--accent);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
+    transition: color 0.3s ease;
+}
+
+.map-marker-link:hover .map-pin {
+    color: #f3d49f;
 }
 
 .map-ping {
@@ -1439,6 +1455,11 @@ body.hover-interactive .custom-cursor-glow {
     border-radius: 50%;
     border: 2px solid var(--accent);
     animation: mapPing 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    transition: border-color 0.3s ease;
+}
+
+.map-marker-link:hover .map-ping {
+    border-color: #f3d49f;
 }
 
 @keyframes mapPing {
@@ -1446,96 +1467,6 @@ body.hover-interactive .custom-cursor-glow {
     100% { transform: scale(1.8); opacity: 0; }
 }
 
-/* Glassmorphic Address Badge at the Bottom */
-.map-address-badge {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    background: rgba(15, 15, 15, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(226, 178, 88, 0.2);
-    padding: 14px 20px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    z-index: 3;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.visit-card-map:hover .map-address-badge {
-    border-color: rgba(226, 178, 88, 0.35);
-    transform: translateY(-2px);
-}
-
-.map-badge-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.map-badge-icon {
-    color: var(--accent);
-    font-size: 1.2rem;
-    background: rgba(226, 178, 88, 0.1);
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(226, 178, 88, 0.15);
-}
-
-.map-badge-name {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--txt-primary);
-    margin-bottom: 2px;
-}
-
-.map-badge-addr {
-    display: block;
-    font-size: 0.72rem;
-    color: var(--txt-muted);
-    letter-spacing: 0.02em;
-}
-
-.map-badge-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--accent);
-    color: #000;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    padding: 8px 14px;
-    border-radius: 6px;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.map-badge-link:hover {
-    background: #f3d49f;
-    transform: scale(1.03);
-}
-
-@media (max-width: 576px) {
-    .map-address-badge {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-        padding: 12px;
-    }
-    .map-badge-link {
-        justify-content: center;
-    }
-}
 
 /* ─── 12. FOOTER ─── */
 .site-footer {

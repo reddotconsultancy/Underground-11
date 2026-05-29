@@ -1727,6 +1727,22 @@ export default function Home() {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Underground 11 Coffee Bar Location"
                 ></iframe>
+
+                {/* Clickable yellowish map marker pin */}
+                <a 
+                  href="https://www.google.com/maps/place/Underground+11+Coffee+Bar/@12.9056157,74.8519412,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba35b1d4e78a6ff:0xde1c1c73a4b0d0c3!8m2!3d12.9056157!4d74.8519412!16s%2Fg%2F11wsp02c01"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="map-marker-link"
+                  title="Open in Google Maps"
+                >
+                  <div className="map-overlay-pin">
+                    <div className="map-pin-anim">
+                      <i className="fas fa-map-marker-alt map-pin"></i>
+                      <div className="map-ping"></div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
 
