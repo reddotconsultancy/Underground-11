@@ -1713,9 +1713,9 @@ export default function Home() {
             {/* Premium Map Card */}
             <div className="visit-card visit-card-map">
               <div className="map-embed-wrap">
-                {/* Dark-styled Google Maps using exact coordinates */}
+                {/* Dark-styled Google Maps using exact Cafe location */}
                 <iframe
-                  src="https://maps.google.com/maps?q=12.923483,74.862412&z=16&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.4326557476834!2d74.8519412!3d12.9056157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35b1d4e78a6ff%3A0xde1c1c73a4b0d0c3!2sUnderground%2011%20Coffee%20Bar!5e0!3m2!1sen!2sin!4v1716960000000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{
@@ -1727,34 +1727,9 @@ export default function Home() {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Underground 11 Coffee Bar Location"
                 ></iframe>
-
-                {/* Animated gold pin centered on location */}
-                <div className="map-overlay-pin">
-                  <div className="map-pin-anim">
-                    <i className="fas fa-map-marker-alt map-pin"></i>
-                    <div className="map-ping"></div>
-                  </div>
-                </div>
-
-                {/* Frosted glass address badge at bottom */}
-                <div className="map-address-badge">
-                  <div className="map-badge-row">
-                    <i className="fas fa-location-dot map-badge-icon"></i>
-                    <div>
-                      <span className="map-badge-name">UNDERGROUND 11</span>
-                      <span className="map-badge-addr">Airport Road, Yeyyadi, Mangaluru</span>
-                    </div>
-                  </div>
-                  <a
-                    href="https://maps.google.com/?q=12.923483,74.862412"
-                    target="_blank"
-                    className="map-badge-link"
-                  >
-                    Get Directions <i className="fas fa-arrow-up-right-from-square"></i>
-                  </a>
-                </div>
               </div>
             </div>
+
 
           </div>
         </div>
