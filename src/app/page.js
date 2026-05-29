@@ -1142,11 +1142,19 @@ export default function Home() {
         </div>
 
         <div className="atm-bands">
+          {/* 1. Bar Counter */}
           <div className="atm-band" data-speed="1.08">
             <div
-              className="atm-band-img"
+              className="atm-band-blur"
               style={{ backgroundImage: "url('/assets/atm_counter.jpg')" }}
             ></div>
+            <div className="atm-band-img-wrap">
+              <img
+                src="/assets/atm_counter.jpg"
+                alt="The Bar Counter"
+                className="atm-band-img"
+              />
+            </div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
               <div className="atm-amber-leak"></div>
@@ -1156,11 +1164,19 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 2. Lounge */}
           <div className="atm-band atm-band-right" data-speed="0.92">
             <div
-              className="atm-band-img"
+              className="atm-band-blur"
               style={{ backgroundImage: "url('/assets/atm_lounge.jpg')" }}
             ></div>
+            <div className="atm-band-img-wrap">
+              <img
+                src="/assets/atm_lounge.jpg"
+                alt="The Lounge"
+                className="atm-band-img"
+              />
+            </div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
               <div className="atm-glass-reflection"></div>
@@ -1170,11 +1186,19 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 3. Espresso Station */}
           <div className="atm-band" data-speed="1.05">
             <div
-              className="atm-band-img"
+              className="atm-band-blur"
               style={{ backgroundImage: "url('/assets/atm_barista_wide.jpg')" }}
             ></div>
+            <div className="atm-band-img-wrap">
+              <img
+                src="/assets/atm_barista_wide.jpg"
+                alt="The Espresso Station"
+                className="atm-band-img"
+              />
+            </div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
               <div className="atm-amber-leak"></div>
@@ -1184,11 +1208,19 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 4. Brew Shelves */}
           <div className="atm-band atm-band-right" data-speed="0.95">
             <div
-              className="atm-band-img"
+              className="atm-band-blur"
               style={{ backgroundImage: "url('/assets/atm_shelves.jpg')" }}
             ></div>
+            <div className="atm-band-img-wrap">
+              <img
+                src="/assets/atm_shelves.jpg"
+                alt="The Brew Shelves"
+                className="atm-band-img"
+              />
+            </div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
             </div>
@@ -1197,11 +1229,19 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 5. Barista Corner */}
           <div className="atm-band" data-speed="1.04">
             <div
-              className="atm-band-img"
+              className="atm-band-blur"
               style={{ backgroundImage: "url('/assets/atm_barista_corner.jpg')" }}
             ></div>
+            <div className="atm-band-img-wrap">
+              <img
+                src="/assets/atm_barista_corner.jpg"
+                alt="The Barista Corner"
+                className="atm-band-img"
+              />
+            </div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
               <div className="atm-amber-leak"></div>
@@ -1211,11 +1251,19 @@ export default function Home() {
             </div>
           </div>
 
+          {/* 6. Espresso Craftsmanship */}
           <div className="atm-band atm-band-right" data-speed="0.96">
             <div
-              className="atm-band-img"
+              className="atm-band-blur"
               style={{ backgroundImage: "url('/assets/atm_barista_back.jpg')" }}
             ></div>
+            <div className="atm-band-img-wrap">
+              <img
+                src="/assets/atm_barista_back.jpg"
+                alt="Espresso Craftsmanship"
+                className="atm-band-img"
+              />
+            </div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
               <div className="atm-glass-reflection"></div>
