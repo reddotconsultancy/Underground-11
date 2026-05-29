@@ -675,10 +675,13 @@ export default function Home() {
               className="nav-logo-img"
             />
             <span className="nav-logo-text">
-              Underground <em>11</em>
+              UNDERGROUND <em>11</em>
             </span>
           </a>
           <ul className="nav-links" id="nav-links">
+            <li>
+              <a href="#about">About</a>
+            </li>
             <li>
               <a href="#menu">Menu</a>
             </li>
@@ -716,6 +719,9 @@ export default function Home() {
         <div className="mobile-menu-inner">
           <ul className="mobile-links">
             <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
               <a href="#menu">Menu</a>
             </li>
             <li>
@@ -745,11 +751,11 @@ export default function Home() {
 
         <div className="hero-content">
           <div className="hero-eyebrow">
-            <span>Specialty Coffee &amp; Late-Night Lounge</span>
+            <span>Specialty Coffee &amp; Late-Night Vibes</span>
           </div>
 
           <h1 className="hero-title">
-            <span className="hero-title-main">Underground 11</span>
+            <span className="hero-title-main">UNDERGROUND 11</span>
             <br />
             <span className="hero-title-serif">
               C
@@ -763,7 +769,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="hero-subtitle">
-            Specialty coffee, house-baked pastries, curated lofi night vibes music &amp; late-night cafe energy.
+            Specialty coffee, house-baked pastries, curated lofi night vibes music &amp; chill cafe energy.
           </p>
           <div className="hero-ctas">
             <a href="#menu" className="btn-primary" id="hero-btn-menu">
@@ -797,6 +803,36 @@ export default function Home() {
           <audio id="vibe-audio" src="/assets/vibe.mp3" loop></audio>
         </div>
       </header>
+
+      {/* SECTION: ABOUT */}
+      <section className="about-section" id="about">
+        <div className="about-glow-backdrop"></div>
+        <div className="about-grid">
+          <div className="about-content">
+            <span className="section-eyebrow">Our Story</span>
+            <h2 className="section-title">A Space for <em>Connection</em></h2>
+            <div className="about-text-glow">
+              Born from a love for specialty coffee, slow-baked pastries, and lofi beats.
+            </div>
+            <p className="about-desc-p">
+              UNDERGROUND 11 is a moody, hidden sanctuary designed for those who appreciate the finer details of coffee craftsmanship. We serve premium Uji matcha, slow-steeped signature cold brews, and classic espresso drinks made with carefully sourced beans.
+            </p>
+            <p className="about-desc-p">
+              Our space is more than just a coffee bar; it is an evening escape. Whether you are catching up with friends, working in a cozy corner, or simply winding down your day, our curated atmosphere and lofi soundtracks provide the perfect backdrop for connection.
+            </p>
+          </div>
+          <div className="about-image-column">
+            <div className="about-img-wrap">
+              <img
+                src="/assets/gal_interior.jpg"
+                alt="UNDERGROUND 11 Lounge Interior"
+                className="about-img"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* SECTION 2: PRODUCT SHOWCASE */}
       <section className="showcase-section" id="menu">
@@ -1135,7 +1171,7 @@ export default function Home() {
       <section className="atmosphere-section" id="atmosphere">
         <div className="atm-header">
           <span className="section-eyebrow">The Space</span>
-          <h2 className="section-title">Feel the <em>Underground</em></h2>
+          <h2 className="section-title">Feel the <em>UNDERGROUND</em></h2>
           <p className="section-sub">
             Where baristas become artists, fresh pastries satisfy your late-night cravings, and curated lofi night vibes music sets the perfect cafe mood.
           </p>
@@ -1281,7 +1317,7 @@ export default function Home() {
             }
           </p>
           <span className="atm-quote-attr">
-            {"— Underground 11, Est. Always"}
+            {"— UNDERGROUND 11, Est. Always"}
           </span>
         </div>
       </section>
@@ -1289,7 +1325,7 @@ export default function Home() {
       {/* SECTION 4: GALLERY */}
       <section className="gallery-section" id="gallery">
         <div className="gallery-header">
-          <span className="section-eyebrow">Life at Underground</span>
+          <span className="section-eyebrow">Life at UNDERGROUND</span>
           <h2 className="section-title">Our <em>Gallery</em></h2>
         </div>
 
@@ -1476,7 +1512,7 @@ export default function Home() {
                 <i className="fas fa-star"></i>
               </div>
               <p className="review-text">
-                {"\"The late-night vibes here are unmatched. Their cold brew is easily the best in Mangaluru, and the music sets the perfect mood.\""}
+                {"\"The chill evening vibes here are unmatched. Their cold brew is easily the best in Mangaluru, and the music sets the perfect mood.\""}
               </p>
             </div>
             <div className="review-author">
@@ -1499,7 +1535,7 @@ export default function Home() {
                 <i className="fas fa-star"></i>
               </div>
               <p className="review-text">
-                {"\"Underground 11 is a hidden gem. The attention to detail in their coffee and the velvet latte is incredible. An absolute must-visit!\""}
+                {"\"UNDERGROUND 11 is a hidden gem. The attention to detail in their coffee and the velvet latte is incredible. An absolute must-visit!\""}
               </p>
             </div>
             <div className="review-author">
@@ -1522,7 +1558,7 @@ export default function Home() {
                 <i className="fas fa-star"></i>
               </div>
               <p className="review-text">
-                {"\"A perfect place to unwind. Love the aesthetic, the silent lofi beats, and the strawberry caramel cake. My favorite late-night spot.\""}
+                {"\"A perfect place to unwind. Love the aesthetic, the silent lofi beats, and the strawberry caramel cake. My favorite evening spot.\""}
               </p>
             </div>
             <div className="review-author">
@@ -1538,7 +1574,7 @@ export default function Home() {
 
       {/* SECTION 5: VISIT */}
       <section className="visit-section" id="visit">
-        <div className="visit-watermark">Underground 11</div>
+        <div className="visit-watermark">UNDERGROUND 11</div>
 
         <div className="visit-inner">
           <div className="visit-header">
@@ -1557,7 +1593,7 @@ export default function Home() {
               </div>
               <h3 className="visit-card-title">Location</h3>
               <p className="visit-card-body">
-                Underground 11 Coffee Bar
+                UNDERGROUND 11 Coffee Bar
                 <br />
                 Ground Floor, Mindspace Building
                 <br />
@@ -1615,33 +1651,64 @@ export default function Home() {
               <h3 className="visit-card-title">Hours</h3>
               <div className="hours-list">
                 <div className="hours-row">
-                  <span>Tue – Sun</span>
+                  <span>Monday</span>
+                  <span style={{ color: "var(--accent)" }}>Closed</span>
+                </div>
+                <div className="hours-row">
+                  <span>Tuesday</span>
                   <span>10:00 AM – 8:30 PM</span>
                 </div>
                 <div className="hours-row">
-                  <span>Monday</span>
-                  <span style={{ color: "var(--accent)" }}>Closed</span>
+                  <span>Wednesday</span>
+                  <span>10:00 AM – 8:30 PM</span>
+                </div>
+                <div className="hours-row">
+                  <span>Thursday</span>
+                  <span>10:00 AM – 8:30 PM</span>
+                </div>
+                <div className="hours-row">
+                  <span>Friday</span>
+                  <span>10:00 AM – 8:30 PM</span>
+                </div>
+                <div className="hours-row">
+                  <span>Saturday</span>
+                  <span>10:00 AM – 8:30 PM</span>
+                </div>
+                <div className="hours-row">
+                  <span>Sunday</span>
+                  <span>10:30 AM – 8:30 PM</span>
                 </div>
               </div>
             </div>
 
             <div className="visit-card">
               <div className="visit-card-icon">
-                <i className="fab fa-instagram"></i>
+                <i className="fas fa-share-alt"></i>
               </div>
               <h3 className="visit-card-title">Social</h3>
               <p className="visit-card-body">
                 {
-                  "See what's brewing daily. Stories, reels, and behind-the-bar content every day."
+                  "Connect with us online on Instagram or message us directly on WhatsApp."
                 }
               </p>
-              <a
-                href="https://www.instagram.com/underground11_coffeebar"
-                target="_blank"
-                className="visit-link neon-link instagram-link"
-              >
-                <i className="fab fa-instagram"></i> @underground11_coffeebar
-              </a>
+              <div className="social-links-wrap" style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                <a
+                  href="https://www.instagram.com/underground11_coffeebar"
+                  target="_blank"
+                  className="visit-link neon-link instagram-link"
+                  style={{ display: "inline-flex", width: "fit-content" }}
+                >
+                  <i className="fab fa-instagram"></i> @underground11_coffeebar
+                </a>
+                <a
+                  href="https://wa.me/910000000000"
+                  target="_blank"
+                  className="visit-link neon-link whatsapp-link"
+                  style={{ display: "inline-flex", width: "fit-content" }}
+                >
+                  <i className="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+              </div>
             </div>
 
             <div className="visit-card visit-card-map">
@@ -1651,7 +1718,7 @@ export default function Home() {
                   <div className="map-ping"></div>
                 </div>
                 <p>
-                  Underground 11
+                  UNDERGROUND 11
                   <br />
                   Coffee Bar
                 </p>
@@ -1671,13 +1738,14 @@ export default function Home() {
               className="footer-logo"
             />
             <p>
-              Underground 11 Coffee Bar
+              UNDERGROUND 11 Coffee Bar
               <br />
               <em>Specialty Coffee &amp; Late-Night Vibes</em>
             </p>
           </div>
           <div className="footer-links">
             <a href="#home">Home</a>
+            <a href="#about">About</a>
             <a href="#menu">Menu</a>
             <a href="#atmosphere">Atmosphere</a>
             <a href="#gallery">Gallery</a>
@@ -1694,7 +1762,7 @@ export default function Home() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2025 Underground 11 Coffee Bar. All rights reserved.</span>
+          <span>© 2025 UNDERGROUND 11 Coffee Bar. All rights reserved.</span>
         </div>
       </footer>
     </>
