@@ -87,12 +87,11 @@ export default function Home() {
       const TOTAL = slides.length;
 
       const glowColors = [
-        "rgba(226,178,88,0.14)", // espresso — amber
-        "rgba(200,150,80,0.12)", // latte — warm
-        "rgba(80,130,200,0.12)", // iced — blue
-        "rgba(92,173,106,0.13)", // matcha — green
-        "rgba(220,90,90,0.12)",  // dessert — red/pink
-        "rgba(0,210,255,0.12)", // cold brew — teal
+        "rgba(166,120,80,0.14)", // tiramisu — cocoa brown
+        "rgba(100,80,60,0.12)",  // cold brew — coffee brown
+        "rgba(226,178,88,0.14)", // rum barrel — smoky gold
+        "rgba(92,173,106,0.15)", // strawberry matcha — matcha green
+        "rgba(240,230,200,0.13)", // vietnamese latte — condensed milk cream
       ];
 
       slides.forEach((s, i) => {
@@ -812,13 +811,13 @@ export default function Home() {
                 01
               </span>
               <span className="counter-sep">/</span>
-              <span className="counter-total">06</span>
+              <span className="counter-total">05</span>
             </div>
           </div>
 
           <div className="stage-glow" id="stage-glow"></div>
 
-          {/* Product 1 */}
+          {/* Product 1 — Tiramisu Latte */}
           <div
             className="product-slide active"
             data-index="0"
@@ -829,77 +828,25 @@ export default function Home() {
               style={{ "--slide-grain-opacity": 0.04 }}
             ></div>
             <div className="product-copy product-info-card">
-              <span className="product-eyebrow">Signature Pour</span>
+              <span className="product-eyebrow">Layered Special</span>
               <span className="product-num">01 //</span>
               <h2 className="product-title">
-                Underground
-                <br />
-                <em>Espresso</em>
-              </h2>
-              <p className="product-sub">
-                Triple-ristretto, aged 24h, served in hand-blown glass with
-                crema that never quits.
-              </p>
-              <div className="product-details">
-                <span className="detail-item">
-                  <i className="fas fa-fire"></i> Double Shot
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-thermometer-half"></i> 92°C Brew
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-leaf"></i> Single Origin
-                </span>
-              </div>
-            </div>
-            <div className="product-scene product-image-wrapper">
-              <canvas className="particle-canvas" data-type="espresso"></canvas>
-              <div className="product-img-wrap">
-                <img
-                  src="/assets/cappuccino_logo.jpg"
-                  alt="Underground Espresso"
-                  className="product-img"
-                  draggable="false"
-                />
-                <div className="product-light-left"></div>
-                <div className="product-light-right"></div>
-              </div>
-            </div>
-            <div className="product-quote">
-              <span className="quote-big">
-                {"\"THIS IS\""}
-                <br />
-                {"\"THE REAL\""}
-                <br />
-                {"\"THING\""}
-              </span>
-            </div>
-          </div>
-
-          {/* Product 2 */}
-          <div className="product-slide" data-index="1" data-product="latte">
-            <div className="slide-bg"></div>
-            <div className="product-copy product-info-card">
-              <span className="product-eyebrow">House Favourite</span>
-              <span className="product-num">02 //</span>
-              <h2 className="product-title">
-                Velvet
+                Tiramisu
                 <br />
                 <em>Latte</em>
               </h2>
               <p className="product-sub">
-                Silky microfoam, oat milk base, hand-pulled espresso — served in
-                a glass that glows amber under our bar lights.
+                Creamy, layered dessert coffee. A double shot of bold espresso poured over cold, velvety milk and sweet cream, finished with a heavy dusting of cocoa powder and a dusted rim.
               </p>
               <div className="product-details">
                 <span className="detail-item">
-                  <i className="fas fa-mug-hot"></i> Oat Milk
+                  <i className="fas fa-mug-hot"></i> Espresso &amp; Milk
                 </span>
                 <span className="detail-item">
-                  <i className="fas fa-star"></i> Bestseller
+                  <i className="fas fa-ice-cream"></i> Creamy Layer
                 </span>
                 <span className="detail-item">
-                  <i className="fas fa-award"></i> Award-winning
+                  <i className="fas fa-cookie"></i> Cocoa Dusted
                 </span>
               </div>
             </div>
@@ -907,8 +854,8 @@ export default function Home() {
               <canvas className="particle-canvas" data-type="latte"></canvas>
               <div className="product-img-wrap">
                 <img
-                  src="/assets/glass_latte.jpg"
-                  alt="Velvet Latte"
+                  src="/assets/tiramisu_latte.jpg"
+                  alt="Underground Tiramisu Latte"
                   className="product-img"
                   draggable="false"
                 />
@@ -918,196 +865,38 @@ export default function Home() {
             </div>
             <div className="product-quote">
               <span className="quote-big">
-                {"\"THIS AIN'T\""}
+                {"\"COFFEE\""}
                 <br />
-                {"\"YOUR AVERAGE\""}
+                {"\"MEETS\""}
                 <br />
-                {"\"LATTE\""}
+                {"\"DESSERT\""}
               </span>
             </div>
           </div>
 
-          {/* Product 3 */}
-          <div className="product-slide" data-index="2" data-product="iced">
-            <div className="slide-bg"></div>
-            <div className="product-copy product-info-card">
-              <span className="product-eyebrow">Late Night Essential</span>
-              <span className="product-num">03 //</span>
-              <h2 className="product-title">
-                Midnight Iced
-                <br />
-                <em>Americano</em>
-              </h2>
-              <p className="product-sub">
-                Cold-diluted espresso, hand-chipped ice, served in a 400ml
-                glass. Dark, bold, unfiltered.
-              </p>
-              <div className="product-details">
-                <span className="detail-item">
-                  <i className="fas fa-snowflake"></i> Over Ice
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-moon"></i> Night Special
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-bolt"></i> Full Strength
-                </span>
-              </div>
-            </div>
-            <div className="product-scene product-image-wrapper">
-              <canvas className="particle-canvas" data-type="iced"></canvas>
-              <div className="product-img-wrap">
-                <img
-                  src="/assets/layered_drink.jpg"
-                  alt="Midnight Iced Americano"
-                  className="product-img"
-                  draggable="false"
-                />
-                <div className="product-light-left"></div>
-                <div className="product-light-right"></div>
-              </div>
-            </div>
-            <div className="product-quote">
-              <span className="quote-big">
-                {"\"DARK\""}
-                <br />
-                {"\"COLD\""}
-                <br />
-                {"\"UNFILTERED\""}
-              </span>
-            </div>
-          </div>
-
-          {/* Product 4 */}
-          <div className="product-slide" data-index="3" data-product="matcha">
-            <div className="slide-bg"></div>
-            <div className="product-copy product-info-card">
-              <span className="product-eyebrow">Zen Ritual</span>
-              <span className="product-num">04 //</span>
-              <h2 className="product-title">
-                Matcha
-                <br />
-                <em>Glow</em>
-              </h2>
-              <p className="product-sub">
-                Ceremonial grade matcha, oat milk whip, gold flake — handcrafted
-                to glow as green as good days.
-              </p>
-              <div className="product-details">
-                <span className="detail-item">
-                  <i className="fas fa-leaf"></i> Ceremonial Grade
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-seedling"></i> Vegan
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-sun"></i> Mood Lifter
-                </span>
-              </div>
-            </div>
-            <div className="product-scene product-image-wrapper">
-              <canvas className="particle-canvas" data-type="matcha"></canvas>
-              <div className="product-img-wrap">
-                <img
-                  src="/assets/matcha_drinks.jpg"
-                  alt="Matcha Glow"
-                  className="product-img"
-                  draggable="false"
-                />
-                <div className="product-light-left"></div>
-                <div className="product-light-right"></div>
-              </div>
-            </div>
-            <div className="product-quote">
-              <span className="quote-big">
-                {"\"GREEN\""}
-                <br />
-                {"\"IS THE\""}
-                <br />
-                {"\"NEW BLACK\""}
-              </span>
-            </div>
-          </div>
-
-          {/* Product 5 */}
-          <div className="product-slide" data-index="4" data-product="dessert">
-            <div className="slide-bg"></div>
-            <div className="product-copy product-info-card">
-              <span className="product-eyebrow">Patisserie</span>
-              <span className="product-num">05 //</span>
-              <h2 className="product-title">
-                Strawberry Caramel
-                <br />
-                <em>Cake</em>
-              </h2>
-              <p className="product-sub">
-                House-baked daily. Layers of caramel sponge, fresh strawberry
-                compote, and whipped mascarpone cream.
-              </p>
-              <div className="product-details">
-                <span className="detail-item">
-                  <i className="fas fa-birthday-cake"></i> House Baked
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-clock"></i> Daily Fresh
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-heart"></i> Limited
-                </span>
-              </div>
-            </div>
-            <div className="product-scene product-image-wrapper">
-              <canvas className="particle-canvas" data-type="dessert"></canvas>
-              <div className="product-img-wrap">
-                <img
-                  src="/assets/strawberry_cake.jpg"
-                  alt="Strawberry Caramel Cake"
-                  className="product-img"
-                  draggable="false"
-                />
-                <div className="product-light-left"></div>
-                <div className="product-light-right"></div>
-              </div>
-            </div>
-            <div className="product-quote">
-              <span className="quote-big">
-                {"\"WORTH\""}
-                <br />
-                {"\"EVERY\""}
-                <br />
-                {"\"CALORIE\""}
-              </span>
-            </div>
-          </div>
-
-          {/* Product 6 */}
-          <div
-            className="product-slide"
-            data-index="5"
-            data-product="coldbrew"
-          >
+          {/* Product 2 — Cold Brew */}
+          <div className="product-slide" data-index="1" data-product="coldbrew">
             <div className="slide-bg"></div>
             <div className="product-copy product-info-card">
               <span className="product-eyebrow">Signature Brew</span>
-              <span className="product-num">06 //</span>
+              <span className="product-num">02 //</span>
               <h2 className="product-title">
-                Cold Brew
+                Signature
                 <br />
-                <em>No. 11</em>
+                <em>Cold Brew</em>
               </h2>
               <p className="product-sub">
-                18-hour slow-steeped cold brew, strained twice, served with mint
-                cold foam and a citrus peel. Underground's crown jewel.
+                Bold, slow-steeped specialty cold brew coffee served over ice. Crystal clear, refreshing, and deeply flavorful with a smooth chocolatey finish.
               </p>
               <div className="product-details">
+                <span className="detail-item">
+                  <i className="fas fa-snowflake"></i> Served Ice Cold
+                </span>
                 <span className="detail-item">
                   <i className="fas fa-hourglass-half"></i> 18hr Steep
                 </span>
                 <span className="detail-item">
-                  <i className="fas fa-crown"></i> Signature
-                </span>
-                <span className="detail-item">
-                  <i className="fas fa-snowflake"></i> Served Cold
+                  <i className="fas fa-tint"></i> Smooth Finish
                 </span>
               </div>
             </div>
@@ -1115,8 +904,8 @@ export default function Home() {
               <canvas className="particle-canvas" data-type="coldbrew"></canvas>
               <div className="product-img-wrap">
                 <img
-                  src="/assets/cold_brew_mint.jpg"
-                  alt="Cold Brew No. 11"
+                  src="/assets/cold_brew_premium.jpg"
+                  alt="Underground Signature Cold Brew"
                   className="product-img"
                   draggable="false"
                 />
@@ -1126,11 +915,161 @@ export default function Home() {
             </div>
             <div className="product-quote">
               <span className="quote-big">
-                {"\"18 HOURS\""}
+                {"\"PURE\""}
                 <br />
-                {"\"OF PURE\""}
+                {"\"SLOW\""}
                 <br />
-                {"\"PATIENCE\""}
+                {"\"REFRESHMENT\""}
+              </span>
+            </div>
+          </div>
+
+          {/* Product 3 — Rum Barrel Rosemary Smoke */}
+          <div className="product-slide" data-index="2" data-product="iced">
+            <div className="slide-bg"></div>
+            <div className="product-copy product-info-card">
+              <span className="product-eyebrow">Sensory Infusion</span>
+              <span className="product-num">03 //</span>
+              <h2 className="product-title">
+                Rum Barrel
+                <br />
+                <em>Rosemary Smoke</em>
+              </h2>
+              <p className="product-sub">
+                Specialty cold brew aged in oak rum barrels, infused with aromatic rosemary wood smoke under a custom wooden lid. A sensory, smoky experience with rich barrel-aged notes.
+              </p>
+              <div className="product-details">
+                <span className="detail-item">
+                  <i className="fas fa-wind"></i> Rosemary Smoke
+                </span>
+                <span className="detail-item">
+                  <i className="fas fa-history"></i> Oak Aged
+                </span>
+                <span className="detail-item">
+                  <i className="fas fa-magic"></i> Sensory Serve
+                </span>
+              </div>
+            </div>
+            <div className="product-scene product-image-wrapper">
+              <canvas className="particle-canvas" data-type="iced"></canvas>
+              <div className="product-img-wrap">
+                <img
+                  src="/assets/rum_barrel_smoke.jpg"
+                  alt="Rum Barrel Cold Brew Rosemary Smoke"
+                  className="product-img"
+                  draggable="false"
+                />
+                <div className="product-light-left"></div>
+                <div className="product-light-right"></div>
+              </div>
+            </div>
+            <div className="product-quote">
+              <span className="quote-big">
+                {"\"OAK\""}
+                <br />
+                {"\"BARREL\""}
+                <br />
+                {"\"SMOKE\""}
+              </span>
+            </div>
+          </div>
+
+          {/* Product 4 — Strawberry Matcha */}
+          <div className="product-slide" data-index="3" data-product="matcha">
+            <div className="slide-bg"></div>
+            <div className="product-copy product-info-card">
+              <span className="product-eyebrow">Zen Fusion</span>
+              <span className="product-num">04 //</span>
+              <h2 className="product-title">
+                Strawberry
+                <br />
+                <em>Matcha</em>
+              </h2>
+              <p className="product-sub">
+                A beautiful tri-layer iced drink combining sweet strawberry compote at the base, silky cold milk in the middle, and premium whisked Uji ceremonial matcha at the top.
+              </p>
+              <div className="product-details">
+                <span className="detail-item">
+                  <i className="fas fa-leaf"></i> Uji Matcha
+                </span>
+                <span className="detail-item">
+                  <i className="fas fa-seedling"></i> Strawberry Puree
+                </span>
+                <span className="detail-item">
+                  <i className="fas fa-palette"></i> Tri-Layered
+                </span>
+              </div>
+            </div>
+            <div className="product-scene product-image-wrapper">
+              <canvas className="particle-canvas" data-type="matcha"></canvas>
+              <div className="product-img-wrap">
+                <img
+                  src="/assets/strawberry_matcha.jpg"
+                  alt="Underground Strawberry Matcha"
+                  className="product-img"
+                  draggable="false"
+                />
+                <div className="product-light-left"></div>
+                <div className="product-light-right"></div>
+              </div>
+            </div>
+            <div className="product-quote">
+              <span className="quote-big">
+                {"\"VIBRANT\""}
+                <br />
+                {"\"LAYERS\""}
+                <br />
+                {"\"OF ART\""}
+              </span>
+            </div>
+          </div>
+
+          {/* Product 5 — Vietnamese Latte */}
+          <div className="product-slide" data-index="4" data-product="dessert">
+            <div className="slide-bg"></div>
+            <div className="product-copy product-info-card">
+              <span className="product-eyebrow">Indulgent Classic</span>
+              <span className="product-num">05 //</span>
+              <h2 className="product-title">
+                Vietnamese
+                <br />
+                <em>Latte</em>
+              </h2>
+              <p className="product-sub">
+                Strong, sweet, and silky, Vietnamese Latte blends bold espresso with creamy condensed milk for a smooth, indulgent hit of caffeine with unmistakable character.
+              </p>
+              <div className="product-details">
+                <span className="detail-item">
+                  <i className="fas fa-coffee"></i> Vietnamese Brew
+                </span>
+                <span className="detail-item">
+                  <i className="fas fa-tint"></i> Condensed Milk
+                </span>
+                <span className="detail-item">
+                  <i className="fas fa-bolt"></i> Bold Character
+                </span>
+              </div>
+            </div>
+            <div className="product-scene product-image-wrapper">
+              <canvas className="particle-canvas" data-type="espresso"></canvas>
+              <div className="product-img-wrap">
+                <img
+                  src="/assets/vietnamese_latte.jpg"
+                  alt="Underground Vietnamese Latte"
+                  className="product-img"
+                  draggable="false"
+                />
+                <div className="product-light-left"></div>
+                <div className="product-light-right"></div>
+              </div>
+            </div>
+            <div className="product-quote">
+              <span className="quote-big">
+                {"\"STRONG\""}
+                <br />
+                {"\"SWEET\""}
+                <br />
+                {"\"SILKY\""}
               </span>
             </div>
           </div>
