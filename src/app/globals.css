@@ -1671,38 +1671,26 @@ body.hover-interactive .custom-cursor-glow {
 
 .social-icons-grid {
     display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: 16px;
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 20px;
+    align-items: center;
 }
 
 .social-icon-btn {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    justify-content: center;
     text-decoration: none;
     color: var(--txt-secondary);
-    transition: color 0.25s ease, padding-left 0.25s ease;
+    transition: color 0.25s ease, transform 0.25s ease;
     cursor: pointer;
 }
 
-.social-icon-btn:first-child {
-    border-top: 1px solid rgba(255,255,255,0.06);
-}
-
 .social-icon-btn i {
-    font-size: 1.25rem;
+    font-size: 2rem;
     flex-shrink: 0;
     transition: transform 0.3s ease;
-}
-
-.social-icon-btn .social-icon-label {
-    font-size: 0.82rem;
-    letter-spacing: 0.04em;
-    font-family: var(--font-body);
-    transition: color 0.25s ease;
 }
 
 /* Instagram */
@@ -1713,15 +1701,8 @@ body.hover-interactive .custom-cursor-glow {
     background-clip: text;
 }
 
-.insta-btn:hover {
-    color: rgba(225,48,108,0.9);
-    padding-left: 4px;
-}
-.insta-btn:hover .social-icon-label {
-    color: rgba(225,48,108,0.9);
-}
 .insta-btn:hover i {
-    transform: scale(1.12);
+    transform: scale(1.15);
 }
 
 /* WhatsApp */
@@ -1729,13 +1710,6 @@ body.hover-interactive .custom-cursor-glow {
     color: #25d366;
     -webkit-text-fill-color: #25d366;
 }
-.wa-btn:hover {
-    color: #25d366;
-    padding-left: 4px;
-}
-.wa-btn:hover .social-icon-label {
-    color: #25d366;
-}
 .wa-btn:hover i {
-    transform: scale(1.12);
+    transform: scale(1.15);
 }

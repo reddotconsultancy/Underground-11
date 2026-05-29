@@ -1697,7 +1697,6 @@ export default function Home() {
                   aria-label="Instagram"
                 >
                   <i className="fab fa-instagram"></i>
-                  <span className="social-icon-label">@underground11_coffeebar</span>
                 </a>
                 <a
                   href="https://wa.me/910000000000"
@@ -1706,7 +1705,6 @@ export default function Home() {
                   aria-label="WhatsApp"
                 >
                   <i className="fab fa-whatsapp"></i>
-                  <span className="social-icon-label">Chat on WhatsApp</span>
                 </a>
               </div>
             </div>
