@@ -1408,65 +1408,14 @@ body.hover-interactive .custom-cursor-glow {
     opacity: 1;
 }
 
-/* Gold pulsing map pin overlay in the exact center */
-.map-overlay-pin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    pointer-events: auto;
-    z-index: 2;
-    cursor: pointer;
-    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.map-marker-link {
+/* Clickable map wrapper */
+.map-card-link-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
-    outline: none;
+    cursor: pointer;
 }
-
-.map-marker-link:hover .map-overlay-pin {
-    transform: translate(-50%, -60%) scale(1.25);
-}
-
-.map-pin-anim {
-    position: relative;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.map-pin {
-    font-size: 2.2rem;
-    color: var(--accent);
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
-    transition: color 0.3s ease;
-}
-
-.map-marker-link:hover .map-pin {
-    color: #f3d49f;
-}
-
-.map-ping {
-    position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    border: 2px solid var(--accent);
-    animation: mapPing 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-    transition: border-color 0.3s ease;
-}
-
-.map-marker-link:hover .map-ping {
-    border-color: #f3d49f;
-}
-
-@keyframes mapPing {
-    0%   { transform: scale(0.6); opacity: 0.8; }
-    100% { transform: scale(1.8); opacity: 0; }
-}
-
 
 /* ─── 12. FOOTER ─── */
 .site-footer {

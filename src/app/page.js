@@ -1684,37 +1684,30 @@ export default function Home() {
 
             {/* Premium Map Card */}
             <div className="visit-card visit-card-map">
-              <div className="map-embed-wrap">
-                {/* Google Maps in Day Mode */}
-                <iframe
-                  src="https://maps.google.com/maps?q=UNDERGROUND+11+Coffee+Bar,+Ground+Floor,+Mindspace+Building,+Airport+Road,+Yeyyadi,+Mangaluru&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{
-                    border: 0
-                  }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Underground 11 Coffee Bar Location"
-                ></iframe>
-
-                {/* Clickable yellowish map marker pin */}
-                <a 
-                  href="https://www.google.com/maps/search/?api=1&query=UNDERGROUND+11+Coffee+Bar,+Ground+Floor,+Mindspace+Building,+Airport+Road,+Yeyyadi,+Mangaluru"
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="map-marker-link"
-                  title="Open in Google Maps"
-                >
-                  <div className="map-overlay-pin">
-                    <div className="map-pin-anim">
-                      <i className="fas fa-map-marker-alt map-pin"></i>
-                      <div className="map-ping"></div>
-                    </div>
-                  </div>
-                </a>
-              </div>
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=UNDERGROUND+11+Coffee+Bar,+Ground+Floor,+Mindspace+Building,+Airport+Road,+Yeyyadi,+Mangaluru"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="map-card-link-wrapper"
+                title="Click to open location in Google Maps"
+              >
+                <div className="map-embed-wrap">
+                  {/* Google Maps in Day Mode */}
+                  <iframe
+                    src="https://maps.google.com/maps?q=UNDERGROUND+11+Coffee+Bar,+Ground+Floor,+Mindspace+Building,+Airport+Road,+Yeyyadi,+Mangaluru&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{
+                      border: 0,
+                      pointerEvents: "none"
+                    }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Underground 11 Coffee Bar Location"
+                  ></iframe>
+                </div>
+              </a>
             </div>
 
 
