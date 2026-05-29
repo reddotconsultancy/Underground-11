@@ -1145,7 +1145,7 @@ export default function Home() {
           <div className="atm-band" data-speed="1.08">
             <div
               className="atm-band-img"
-              style={{ backgroundImage: "url('/assets/bar_counter.jpg')" }}
+              style={{ backgroundImage: "url('/assets/atm_counter.jpg')" }}
             ></div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
@@ -1159,37 +1159,25 @@ export default function Home() {
           <div className="atm-band atm-band-right" data-speed="0.92">
             <div
               className="atm-band-img"
-              style={{ backgroundImage: "url('/assets/barista_station.jpg')" }}
+              style={{ backgroundImage: "url('/assets/atm_lounge.jpg')" }}
             ></div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
-            </div>
-            <div className="atm-band-caption">
-              <span>The Barista Station</span>
-            </div>
-          </div>
-
-          <div className="atm-band" data-speed="1.04">
-            <div
-              className="atm-band-img"
-              style={{ backgroundImage: "url('/assets/lounge_arches.jpg')" }}
-            ></div>
-            <div className="atm-band-overlay">
               <div className="atm-glass-reflection"></div>
-              <div className="atm-amber-leak"></div>
             </div>
             <div className="atm-band-caption">
               <span>The Lounge</span>
             </div>
           </div>
 
-          <div className="atm-band atm-band-right" data-speed="0.96">
+          <div className="atm-band" data-speed="1.04">
             <div
               className="atm-band-img"
-              style={{ backgroundImage: "url('/assets/brewing_shelves.jpg')" }}
+              style={{ backgroundImage: "url('/assets/atm_shelves.jpg')" }}
             ></div>
             <div className="atm-band-overlay">
               <div className="atm-led-line"></div>
+              <div className="atm-amber-leak"></div>
             </div>
             <div className="atm-band-caption">
               <span>The Brew Shelves</span>
