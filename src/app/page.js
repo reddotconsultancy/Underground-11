@@ -1682,34 +1682,6 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="visit-card social-card">
-              <div className="visit-card-icon">
-                <i className="fas fa-share-alt"></i>
-              </div>
-              <h3 className="visit-card-title">Follow Us</h3>
-              <p className="visit-card-body">
-                Connect with us online — follow our journey or message us directly.
-              </p>
-              <div className="social-icons-grid">
-                <a
-                  href="https://www.instagram.com/underground11_coffeebar"
-                  target="_blank"
-                  className="social-icon-btn insta-btn"
-                  aria-label="Instagram"
-                >
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a
-                  href="https://wa.me/910000000000"
-                  target="_blank"
-                  className="social-icon-btn wa-btn"
-                  aria-label="WhatsApp"
-                >
-                  <i className="fab fa-whatsapp"></i>
-                </a>
-              </div>
-            </div>
-
             {/* Premium Map Card */}
             <div className="visit-card visit-card-map">
               <div className="map-embed-wrap">
