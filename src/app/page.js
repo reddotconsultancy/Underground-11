@@ -1710,16 +1710,24 @@ export default function Home() {
             </div>
 
             <div className="visit-card visit-card-map">
-              <div className="map-placeholder">
-                <div className="map-pin-anim">
-                  <i className="fas fa-map-marker-alt map-pin"></i>
-                  <div className="map-ping"></div>
+              <div className="map-embed-wrap">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.4!2d74.8350!3d12.8720!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4c4e6e5f0b%3A0x0!2sUnderground+11+Coffee+Bar%2C+Airport+Road%2C+Yeyyadi%2C+Mangaluru!5e0!3m2!1sen!2sin!4v1"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) saturate(0.4) brightness(0.85)" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Underground 11 Coffee Bar Location"
+                ></iframe>
+                <div className="map-overlay-pin">
+                  <div className="map-pin-anim">
+                    <i className="fas fa-map-marker-alt map-pin"></i>
+                    <div className="map-ping"></div>
+                  </div>
+                  <span className="map-overlay-label">UNDERGROUND 11</span>
                 </div>
-                <p>
-                  UNDERGROUND 11
-                  <br />
-                  Coffee Bar
-                </p>
               </div>
             </div>
           </div>
