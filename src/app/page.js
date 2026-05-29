@@ -1295,84 +1295,44 @@ export default function Home() {
 
         <div className="masonry-grid" id="masonry-grid">
           <div className="masonry-item masonry-tall">
-            <img src="/assets/latte_hand.jpg" alt="Latte pour" loading="lazy" />
-            <div className="masonry-caption">The Perfect Pour</div>
+            <img
+              src="/assets/gal_cookies.jpg"
+              alt="Fresh Baked Cookies"
+              loading="lazy"
+            />
+            <div className="masonry-caption">Fresh Baked Cookies</div>
           </div>
           <div className="masonry-item">
             <img
-              src="/assets/floral_latte.jpg"
-              alt="Floral latte"
+              src="/assets/gal_cheesecake.jpg"
+              alt="Basque Cheesecake"
               loading="lazy"
             />
-            <div className="masonry-caption">Floral Latte Art</div>
-          </div>
-          <div className="masonry-item masonry-wide">
-            <img src="/assets/coffee_tray.jpg" alt="Coffee tray" loading="lazy" />
-            <div className="masonry-caption">The Full Experience</div>
-          </div>
-          <div className="masonry-item">
-            <img
-              src="/assets/flower_cookie.jpg"
-              alt="Flower cookie"
-              loading="lazy"
-            />
-            <div className="masonry-caption">Pastry of the Day</div>
+            <div className="masonry-caption">Basque Cheesecake</div>
           </div>
           <div className="masonry-item masonry-tall">
             <img
-              src="/assets/indoor_seating.jpg"
-              alt="Indoor seating"
+              src="/assets/gal_latte_bun.jpg"
+              alt="Morning Ritual"
               loading="lazy"
             />
-            <div className="masonry-caption">The Inner Circle</div>
+            <div className="masonry-caption">Morning Ritual</div>
           </div>
           <div className="masonry-item">
             <img
-              src="/assets/takeaway_cup.jpg"
-              alt="Takeaway cup"
+              src="/assets/gal_balcony.jpg"
+              alt="Balcony Escape"
               loading="lazy"
             />
-            <div className="masonry-caption">On The Go</div>
-          </div>
-          <div className="masonry-item">
-            <img src="/assets/tray_combo.jpg" alt="Tray combo" loading="lazy" />
-            <div className="masonry-caption">The Full Set</div>
-          </div>
-          <div className="masonry-item masonry-wide">
-            <img
-              src="/assets/balcony_lounge.jpg"
-              alt="Balcony lounge"
-              loading="lazy"
-            />
-            <div className="masonry-caption">Balcony Vibes</div>
-          </div>
-          <div className="masonry-item">
-            <img
-              src="/assets/espresso_sticker.jpg"
-              alt="Espresso"
-              loading="lazy"
-            />
-            <div className="masonry-caption">The Daily Ritual</div>
+            <div className="masonry-caption">Balcony Escape</div>
           </div>
           <div className="masonry-item masonry-tall">
             <img
-              src="/assets/interior_plant.jpg"
-              alt="Interior plant"
+              src="/assets/gal_chocolate_tart.jpg"
+              alt="Double Chocolate Tart"
               loading="lazy"
             />
-            <div className="masonry-caption">Urban Greenery</div>
-          </div>
-          <div className="masonry-item">
-            <img
-              src="/assets/biscoff_cheesecake.jpg"
-              alt="Biscoff cheesecake"
-              loading="lazy"
-            />
-            <div className="masonry-caption">Biscoff Dreams</div>
-          </div>
-          <div className="masonry-item">
-            <img src="/assets/affogato.jpg" alt="Affogato" loading="lazy" />
-            <div className="masonry-caption">Affogato Hour</div>
+            <div className="masonry-caption">Double Chocolate Tart</div>
           </div>
         </div>
       </section>
