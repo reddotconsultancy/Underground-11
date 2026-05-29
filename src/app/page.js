@@ -1601,7 +1601,7 @@ export default function Home() {
                 Airport Road, Yeyyadi, Mangaluru
               </p>
               <a
-                href="https://maps.google.com/?q=Underground+11+Coffee+Bar+Yeyyadi+Mangaluru"
+                href="https://www.google.com/maps/search/?api=1&query=UNDERGROUND+11+Coffee+Bar,+Ground+Floor,+Mindspace+Building,+Airport+Road,+Yeyyadi,+Mangaluru"
                 target="_blank"
                 className="visit-link neon-link"
                 style={{ marginBottom: "24px", display: "inline-flex" }}
@@ -1730,7 +1730,7 @@ export default function Home() {
 
                 {/* Clickable yellowish map marker pin */}
                 <a 
-                  href="https://www.google.com/maps/place/Underground+11+Coffee+Bar/@12.9056157,74.8519412,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba35b1d4e78a6ff:0xde1c1c73a4b0d0c3!8m2!3d12.9056157!4d74.8519412!16s%2Fg%2F11wsp02c01"
+                  href="https://www.google.com/maps/search/?api=1&query=UNDERGROUND+11+Coffee+Bar,+Ground+Floor,+Mindspace+Building,+Airport+Road,+Yeyyadi,+Mangaluru"
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="map-marker-link"
