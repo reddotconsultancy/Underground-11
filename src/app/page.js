@@ -1179,7 +1179,7 @@ export default function Home() {
         </div>
 
         <div className="atm-bands">
-          {/* 1. Bar Counter */}
+          {/* 1. Display Showcase */}
           <div className="atm-band" data-speed="1.08">
             <div
               className="atm-band-blur"
@@ -1188,7 +1188,7 @@ export default function Home() {
             <div className="atm-band-img-wrap">
               <img
                 src="/assets/atm_counter.jpg"
-                alt="The Bar Counter"
+                alt="The Display Showcase"
                 className="atm-band-img"
               />
             </div>
@@ -1197,11 +1197,11 @@ export default function Home() {
               <div className="atm-amber-leak"></div>
             </div>
             <div className="atm-band-caption">
-              <span>The Bar Counter</span>
+              <span>The Display Showcase</span>
             </div>
           </div>
 
-          {/* 2. Lounge */}
+          {/* 2. Cozy Seating */}
           <div className="atm-band atm-band-right" data-speed="0.92">
             <div
               className="atm-band-blur"
@@ -1210,7 +1210,7 @@ export default function Home() {
             <div className="atm-band-img-wrap">
               <img
                 src="/assets/atm_lounge.jpg"
-                alt="The Lounge"
+                alt="The Cozy Seating"
                 className="atm-band-img"
               />
             </div>
@@ -1219,7 +1219,7 @@ export default function Home() {
               <div className="atm-glass-reflection"></div>
             </div>
             <div className="atm-band-caption">
-              <span>The Lounge</span>
+              <span>The Cozy Seating</span>
             </div>
           </div>
 
