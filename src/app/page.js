@@ -819,15 +819,28 @@ export default function Home() {
         <div className="about-grid">
           <div className="about-content">
             <span className="section-eyebrow">Our Story</span>
-            <h2 className="section-title">A Space for <em>Connection</em></h2>
+            <h2 className="section-title">Coffee Beyond <em>Caffeine</em></h2>
             <div className="about-text-glow">
-              Born from a love for specialty coffee, slow-baked pastries, and lofi beats.
+              UNDERGROUND 11 is built for people who love coffee beyond just caffeine.
             </div>
             <p className="about-desc-p">
-              UNDERGROUND 11 is a moody, hidden sanctuary designed for those who appreciate the finer details of coffee craftsmanship. We serve premium Uji matcha, slow-steeped signature cold brews, and classic espresso drinks made with carefully sourced beans.
+              We are deeply into specialty coffee — sourcing different beans, understanding origins, and exploring different brewing styles to bring out the true character of coffee. From V60 pour-overs and French Press to AeroPress and Moka Pot brews, every method creates a different experience in the cup.
             </p>
             <p className="about-desc-p">
-              Our space is more than just a coffee bar; it is an evening escape. Whether you are catching up with friends, working in a cozy corner, or simply winding down your day, our curated atmosphere and lofi soundtracks provide the perfect backdrop for connection.
+              We believe clean coffee should never taste bitter. Black coffee, especially, tells a story when brewed right.
+            </p>
+            <p className="about-desc-p">
+              This space is for the coffee tribe — people who enjoy slowing down, listening to music, working quietly, meeting friends, or simply sitting alone with a cup in hand. A place where nobody rushes you. A place where coffee does the talking.
+            </p>
+            <p className="about-desc-p">
+              Our food stays simple, but quality is never compromised. We lean towards healthier choices with low sugar and no sugar options, along with almond milk, oat milk, and ceremonial-grade matcha for people who appreciate clean and mindful drinks.
+            </p>
+            <p className="about-desc-p">
+              UNDERGROUND 11 is not just a café. It’s a space to disconnect from the outside chaos and reconnect with yourself, your people, your music, and your coffee.
+            </p>
+            <p className="about-tagline">
+              Come for the coffee.<br />
+              <em>Stay for the vibe.</em>
             </p>
           </div>
           <div className="about-image-column">

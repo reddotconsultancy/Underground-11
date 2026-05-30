@@ -668,6 +668,27 @@ body.hover-interactive .custom-cursor-glow {
     z-index: 1;
 }
 
+.about-tagline {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--accent);
+    margin-top: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    position: relative;
+    padding-left: 20px;
+}
+.about-tagline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 2px;
+    background: var(--accent);
+    opacity: 0.8;
+}
+
 @media (max-width: 991px) {
     .about-section {
         padding: 80px 4%;
