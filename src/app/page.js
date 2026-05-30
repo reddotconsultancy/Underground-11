@@ -1279,6 +1279,110 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION 3.5: MERCHANDISE */}
+      <section className="merch-section" id="merch">
+        <div className="merch-header">
+          <span className="section-eyebrow">The Gear</span>
+          <h2 className="section-title">UNDERGROUND <em>Merch</em></h2>
+          <p className="section-sub">
+            Wear the vibe. High-quality limited edition apparel and accessories crafted for coffee purists.
+          </p>
+        </div>
+
+        <div className="merch-container">
+          {/* Loop reels videos showcasing merch in vertical frames */}
+          <div className="merch-showcase-videos">
+            <div className="merch-video-card">
+              <div className="merch-video-wrap">
+                <video autoPlay loop muted playsInline className="merch-video">
+                  <source src="/assets/merch_video1.mp4" type="video/mp4" />
+                </video>
+                <div className="video-card-overlay"></div>
+              </div>
+              <span className="merch-video-caption">// Live Vibe 01</span>
+            </div>
+            <div className="merch-video-card">
+              <div className="merch-video-wrap">
+                <video autoPlay loop muted playsInline className="merch-video">
+                  <source src="/assets/merch_video2.mp4" type="video/mp4" />
+                </video>
+                <div className="video-card-overlay"></div>
+              </div>
+              <span className="merch-video-caption">// Live Vibe 02</span>
+            </div>
+          </div>
+
+          {/* Product showcase grid */}
+          <div className="merch-grid">
+            <div className="merch-card">
+              <div className="merch-img-wrap">
+                <img
+                  src="/assets/merch_going_underground.jpg"
+                  alt="Going Underground Tee"
+                  className="merch-img"
+                  loading="lazy"
+                />
+                <div className="merch-card-glow"></div>
+              </div>
+              <div className="merch-info">
+                <h3 className="merch-title">Going Underground Tee</h3>
+                <span className="merch-price">₹999</span>
+                <p className="merch-desc">
+                  Premium heavyweight white cotton tee featuring our signature navigation maze graphic.
+                </p>
+                <a href="https://wa.me/910000000000?text=I%20am%20interested%20in%20the%20Going%20Underground%20Tee" target="_blank" rel="noopener noreferrer" className="merch-buy-btn">
+                  Inquire Size <i className="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="merch-card">
+              <div className="merch-img-wrap">
+                <img
+                  src="/assets/merch_spiral_black.jpg"
+                  alt="Hypnotic Brew Tee"
+                  className="merch-img"
+                  loading="lazy"
+                />
+                <div className="merch-card-glow"></div>
+              </div>
+              <div className="merch-info">
+                <h3 className="merch-title">Hypnotic Brew Tee</h3>
+                <span className="merch-price">₹999</span>
+                <p className="merch-desc">
+                  Super-soft washed black cotton tee featuring the custom hypnotic swirl espresso art.
+                </p>
+                <a href="https://wa.me/910000000000?text=I%20am%20interested%20in%20the%20Hypnotic%20Brew%20Tee" target="_blank" rel="noopener noreferrer" className="merch-buy-btn">
+                  Inquire Size <i className="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <div className="merch-card">
+              <div className="merch-img-wrap">
+                <img
+                  src="/assets/merch_display.jpg"
+                  alt="Signature Gear"
+                  className="merch-img"
+                  loading="lazy"
+                />
+                <div className="merch-card-glow"></div>
+              </div>
+              <div className="merch-info">
+                <h3 className="merch-title">Signature Gear Display</h3>
+                <span className="merch-price">₹699</span>
+                <p className="merch-desc">
+                  Dad hats and limited accessories. Ask at the counter to view our full rack items.
+                </p>
+                <a href="https://wa.me/910000000000?text=I%20am%20interested%20in%20the%20Signature%20Gear%20Collection" target="_blank" rel="noopener noreferrer" className="merch-buy-btn">
+                  Inquire Store <i className="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 4: GALLERY */}
       <section className="gallery-section" id="gallery">
         <div className="gallery-header">
@@ -1719,6 +1823,7 @@ export default function Home() {
             <a href="#about">About</a>
             <a href="#menu">Menu</a>
             <a href="#atmosphere">Atmosphere</a>
+            <a href="#merch">Merchandise</a>
             <a href="#gallery">Gallery</a>
             <a href="#visit">Visit</a>
           </div>
