@@ -192,14 +192,31 @@ body.hover-interactive .custom-cursor-glow {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     padding: 8px 20px;
-    border: 1px solid var(--border-accent);
+    background: var(--accent);
+    border: 1px solid var(--accent);
     border-radius: 40px;
-    color: var(--accent);
+    color: var(--bg-main) !important;
+    font-weight: 700;
     transition: var(--transition-med);
 }
 .nav-cta:hover {
-    background: var(--accent);
-    color: var(--bg-main);
+    background: transparent;
+    color: var(--accent) !important;
+}
+
+.nav-cta-secondary {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    background: transparent;
+    border: 1px solid rgba(226, 178, 88, 0.35);
+    border-radius: 40px;
+    color: var(--accent) !important;
+    transition: var(--transition-med);
+}
+.nav-cta-secondary:hover {
+    background: rgba(226, 178, 88, 0.08);
     border-color: var(--accent);
 }
 
@@ -1288,12 +1305,57 @@ body.hover-interactive .custom-cursor-glow {
     letter-spacing: 0.05em;
 }
 
-.merch-price {
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-size: 1.2rem;
+.merch-size-selector {
+    margin-bottom: 18px;
+}
+
+.size-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--txt-muted);
+    margin-bottom: 8px;
+    font-family: var(--font-display);
+}
+
+.size-options {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.size-chip {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--txt-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.size-chip:hover {
+    border-color: var(--accent);
     color: var(--accent);
-    margin-bottom: 12px;
+    background: rgba(226, 178, 88, 0.05);
+}
+
+.size-chip.active {
+    border-color: var(--accent);
+    color: var(--bg-main) !important;
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(226, 178, 88, 0.35);
+}
+
+.size-chip-wide {
+    padding: 4px 12px;
+    border-color: rgba(226, 178, 88, 0.3);
+    color: var(--accent);
+    background: rgba(226, 178, 88, 0.03);
 }
 
 .merch-desc {
@@ -1717,6 +1779,12 @@ body.hover-interactive .custom-cursor-glow {
     .navbar { padding: 0 24px; }
     .nav-links { display: none; }
     .nav-cta { display: none; }
+    .nav-cta-secondary {
+        display: inline-block !important;
+        font-size: 0.65rem;
+        padding: 6px 14px;
+        margin-right: 0 !important;
+    }
     .mobile-menu-toggle { display: flex; }
 
     .hero { justify-content: center; }

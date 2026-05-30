@@ -1,10 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Home() {
+  const [goingUndergroundSize, setGoingUndergroundSize] = useState("M");
+  const [hypnoticBrewSize, setHypnoticBrewSize] = useState("M");
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
@@ -699,6 +702,9 @@ export default function Home() {
             </li>
           </ul>
           <div className="nav-right">
+            <a href="#merch" className="nav-cta nav-cta-secondary" style={{ marginRight: "12px" }}>
+              Shop Merch
+            </a>
             <a href="#visit" className="nav-cta">
               Reserve a Table
             </a>
@@ -726,6 +732,9 @@ export default function Home() {
             </li>
             <li>
               <a href="#atmosphere">Atmosphere</a>
+            </li>
+            <li>
+              <a href="#merch">Merchandise</a>
             </li>
             <li>
               <a href="#gallery">Gallery</a>
@@ -1326,12 +1335,32 @@ export default function Home() {
               </div>
               <div className="merch-info">
                 <h3 className="merch-title">Going Underground Tee</h3>
-                <span className="merch-price">₹999</span>
+                <div className="merch-size-selector">
+                  <span className="size-label">Select Size</span>
+                  <div className="size-options">
+                    {["S", "M", "L", "XL", "XXL"].map((sz) => (
+                      <span
+                        key={sz}
+                        className={`size-chip ${goingUndergroundSize === sz ? "active" : ""}`}
+                        onClick={() => setGoingUndergroundSize(sz)}
+                      >
+                        {sz}
+                      </span>
+                    ))}
+                  </div>
+                </div>
                 <p className="merch-desc">
                   Premium heavyweight white cotton tee featuring our signature navigation maze graphic.
                 </p>
-                <a href="https://wa.me/910000000000?text=I%20am%20interested%20in%20the%20Going%20Underground%20Tee" target="_blank" rel="noopener noreferrer" className="merch-buy-btn">
-                  Inquire Size <i className="fab fa-whatsapp"></i>
+                <a
+                  href={`https://wa.me/910000000000?text=${encodeURIComponent(
+                    `I am interested in the Going Underground Tee in size ${goingUndergroundSize}`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="merch-buy-btn"
+                >
+                  Inquire Size {goingUndergroundSize} <i className="fab fa-whatsapp"></i>
                 </a>
               </div>
             </div>
@@ -1348,12 +1377,32 @@ export default function Home() {
               </div>
               <div className="merch-info">
                 <h3 className="merch-title">Hypnotic Brew Tee</h3>
-                <span className="merch-price">₹999</span>
+                <div className="merch-size-selector">
+                  <span className="size-label">Select Size</span>
+                  <div className="size-options">
+                    {["S", "M", "L", "XL", "XXL"].map((sz) => (
+                      <span
+                        key={sz}
+                        className={`size-chip ${hypnoticBrewSize === sz ? "active" : ""}`}
+                        onClick={() => setHypnoticBrewSize(sz)}
+                      >
+                        {sz}
+                      </span>
+                    ))}
+                  </div>
+                </div>
                 <p className="merch-desc">
                   Super-soft washed black cotton tee featuring the custom hypnotic swirl espresso art.
                 </p>
-                <a href="https://wa.me/910000000000?text=I%20am%20interested%20in%20the%20Hypnotic%20Brew%20Tee" target="_blank" rel="noopener noreferrer" className="merch-buy-btn">
-                  Inquire Size <i className="fab fa-whatsapp"></i>
+                <a
+                  href={`https://wa.me/910000000000?text=${encodeURIComponent(
+                    `I am interested in the Hypnotic Brew Tee in size ${hypnoticBrewSize}`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="merch-buy-btn"
+                >
+                  Inquire Size {hypnoticBrewSize} <i className="fab fa-whatsapp"></i>
                 </a>
               </div>
             </div>
@@ -1370,7 +1419,12 @@ export default function Home() {
               </div>
               <div className="merch-info">
                 <h3 className="merch-title">Signature Gear Display</h3>
-                <span className="merch-price">₹699</span>
+                <div className="merch-size-selector">
+                  <span className="size-label">Size</span>
+                  <div className="size-options">
+                    <span className="size-chip size-chip-wide">One Size / Adjustable</span>
+                  </div>
+                </div>
                 <p className="merch-desc">
                   Dad hats and limited accessories. Ask at the counter to view our full rack items.
                 </p>
