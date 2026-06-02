@@ -844,13 +844,39 @@ export default function Home() {
             </p>
           </div>
           <div className="about-image-column">
-            <div className="about-img-wrap">
-              <img
-                src="/assets/about_brews.png"
-                alt="Specialty Coffee Brewing Methods — V60, Aeropress, French Press, Moka Pot"
-                className="about-img"
-                loading="lazy"
-              />
+            <div className="about-brews-grid">
+              <div className="about-brew-card">
+                <img
+                  src="/assets/brew_v60.png"
+                  alt="V60 Specialty Coffee Pour-over"
+                  className="about-brew-img"
+                  loading="lazy"
+                />
+              </div>
+              <div className="about-brew-card">
+                <img
+                  src="/assets/brew_aeropress.png"
+                  alt="Aeropress Specialty Coffee Brew"
+                  className="about-brew-img"
+                  loading="lazy"
+                />
+              </div>
+              <div className="about-brew-card">
+                <img
+                  src="/assets/brew_frenchpress.png"
+                  alt="French Press Specialty Coffee Brew"
+                  className="about-brew-img"
+                  loading="lazy"
+                />
+              </div>
+              <div className="about-brew-card">
+                <img
+                  src="/assets/brew_mokapot.png"
+                  alt="Moka Pot Specialty Coffee Brew"
+                  className="about-brew-img"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
