@@ -846,8 +846,8 @@ export default function Home() {
           <div className="about-image-column">
             <div className="about-img-wrap">
               <img
-                src="/assets/gal_interior.jpg"
-                alt="UNDERGROUND 11 Lounge Interior"
+                src="/assets/about_brews.jpg"
+                alt="Specialty Coffee Brewing Methods — V60, Aeropress, French Press, Moka Pot"
                 className="about-img"
                 loading="lazy"
               />
