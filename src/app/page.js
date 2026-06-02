@@ -542,6 +542,88 @@ export default function Home() {
       });
     });
 
+    // 6b. BREW SMOKE CANVASES (About Section)
+    document.querySelectorAll(".brew-smoke-canvas").forEach((canvas) => {
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      let particles = [];
+      let raf;
+
+      const resize = () => {
+        canvas.width = canvas.parentElement.offsetWidth || 200;
+        canvas.height = canvas.parentElement.offsetHeight || 180;
+      };
+      resize();
+      window.addEventListener("resize", resize);
+
+      const W = () => canvas.width;
+      const H = () => canvas.height;
+
+      const createParticle = () => {
+        return {
+          x: W() / 2 + (Math.random() - 0.5) * 60,
+          y: H() + 20,
+          size: Math.random() * 15 + 15,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: -(Math.random() * 0.5 + 0.3),
+          alpha: 0,
+          maxAlpha: Math.random() * 0.09 + 0.03,
+          life: 0,
+          decay: Math.random() * 0.002 + 0.001,
+          expansion: Math.random() * 0.15 + 0.1,
+          wobbleOffset: Math.random() * Math.PI * 2,
+        };
+      };
+
+      for (let i = 0; i < 12; i++) {
+        const p = createParticle();
+        p.y = Math.random() * H();
+        p.life = Math.random();
+        p.size = 15 + p.life * 40;
+        p.alpha = Math.random() * p.maxAlpha;
+        particles.push(p);
+      }
+
+      const animate = () => {
+        ctx.clearRect(0, 0, W(), H());
+        particles.forEach((p) => {
+          p.life += p.decay;
+          p.x += p.vx + Math.sin(p.life * 8 + p.wobbleOffset) * 0.15;
+          p.y += p.vy;
+          p.size += p.expansion;
+
+          if (p.life < 0.3) {
+            p.alpha = (p.life / 0.3) * p.maxAlpha;
+          } else {
+            p.alpha = (1.0 - (p.life - 0.3) / 0.7) * p.maxAlpha;
+          }
+
+          if (p.life >= 1.0 || p.y < -50 || p.x < -50 || p.x > W() + 50) {
+            Object.assign(p, createParticle());
+          }
+
+          ctx.save();
+          ctx.globalAlpha = Math.max(0, p.alpha);
+          const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size);
+          grad.addColorStop(0, "rgba(240, 240, 245, 0.45)");
+          grad.addColorStop(0.3, "rgba(235, 235, 240, 0.18)");
+          grad.addColorStop(1, "rgba(220, 220, 230, 0)");
+          ctx.fillStyle = grad;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        });
+        raf = requestAnimationFrame(animate);
+      };
+      animate();
+
+      canvasCleanups.push(() => {
+        window.removeEventListener("resize", resize);
+        cancelAnimationFrame(raf);
+      });
+    });
+
     // 7. GALLERY — Masonry Hover Tilt Mouse Move
     const masonryCleanups = [];
     document.querySelectorAll(".masonry-item").forEach((item) => {
@@ -847,6 +929,7 @@ export default function Home() {
             <div className="about-brews-grid">
               <div className="about-brew-card">
                 <div className="about-brew-img-wrap">
+                  <canvas className="brew-smoke-canvas"></canvas>
                   <img
                     src="/assets/coffee_v60.png"
                     alt="V60 Specialty Coffee Pour-over"
@@ -860,6 +943,7 @@ export default function Home() {
               </div>
               <div className="about-brew-card">
                 <div className="about-brew-img-wrap">
+                  <canvas className="brew-smoke-canvas"></canvas>
                   <img
                     src="/assets/coffee_aeropress.png"
                     alt="Aeropress Specialty Coffee Brew"
@@ -873,6 +957,7 @@ export default function Home() {
               </div>
               <div className="about-brew-card">
                 <div className="about-brew-img-wrap">
+                  <canvas className="brew-smoke-canvas"></canvas>
                   <img
                     src="/assets/coffee_frenchpress.png"
                     alt="French Press Specialty Coffee Brew"
@@ -886,6 +971,7 @@ export default function Home() {
               </div>
               <div className="about-brew-card">
                 <div className="about-brew-img-wrap">
+                  <canvas className="brew-smoke-canvas"></canvas>
                   <img
                     src="/assets/coffee_mokapot.png"
                     alt="Moka Pot Specialty Coffee Brew"

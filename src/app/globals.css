@@ -722,6 +722,16 @@ body.hover-interactive .custom-cursor-glow {
     position: relative;
 }
 
+.brew-smoke-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
 .about-brew-img {
     max-width: 90%;
     max-height: 90%;
@@ -729,6 +739,8 @@ body.hover-interactive .custom-cursor-glow {
     display: block;
     opacity: 0.9;
     filter: drop-shadow(0 8px 16px rgba(0,0,0,0.6));
+    position: relative;
+    z-index: 2;
     transition: opacity var(--transition-med), transform var(--transition-med);
 }
 
