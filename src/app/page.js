@@ -846,36 +846,56 @@ export default function Home() {
           <div className="about-image-column">
             <div className="about-brews-grid">
               <div className="about-brew-card">
-                <img
-                  src="/assets/brew_v60.png"
-                  alt="V60 Specialty Coffee Pour-over"
-                  className="about-brew-img"
-                  loading="lazy"
-                />
+                <div className="about-brew-img-wrap">
+                  <img
+                    src="/assets/coffee_v60.png"
+                    alt="V60 Specialty Coffee Pour-over"
+                    className="about-brew-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="about-brew-info">
+                  <span className="about-brew-name">V60</span>
+                </div>
               </div>
               <div className="about-brew-card">
-                <img
-                  src="/assets/brew_aeropress.png"
-                  alt="Aeropress Specialty Coffee Brew"
-                  className="about-brew-img"
-                  loading="lazy"
-                />
+                <div className="about-brew-img-wrap">
+                  <img
+                    src="/assets/coffee_aeropress.png"
+                    alt="Aeropress Specialty Coffee Brew"
+                    className="about-brew-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="about-brew-info">
+                  <span className="about-brew-name">Aeropress</span>
+                </div>
               </div>
               <div className="about-brew-card">
-                <img
-                  src="/assets/brew_frenchpress.png"
-                  alt="French Press Specialty Coffee Brew"
-                  className="about-brew-img"
-                  loading="lazy"
-                />
+                <div className="about-brew-img-wrap">
+                  <img
+                    src="/assets/coffee_frenchpress.png"
+                    alt="French Press Specialty Coffee Brew"
+                    className="about-brew-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="about-brew-info">
+                  <span className="about-brew-name">French Press</span>
+                </div>
               </div>
               <div className="about-brew-card">
-                <img
-                  src="/assets/brew_mokapot.png"
-                  alt="Moka Pot Specialty Coffee Brew"
-                  className="about-brew-img"
-                  loading="lazy"
-                />
+                <div className="about-brew-img-wrap">
+                  <img
+                    src="/assets/coffee_mokapot.png"
+                    alt="Moka Pot Specialty Coffee Brew"
+                    className="about-brew-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="about-brew-info">
+                  <span className="about-brew-name">Moka Pot</span>
+                </div>
               </div>
             </div>
           </div>
