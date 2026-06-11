@@ -11,6 +11,11 @@ export default function Home() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
+      // Enable faster scroll trigger processing
+      ScrollTrigger.config({
+        limitCallbacks: true,
+        syncInterval: 40,
+      });
     }
 
     // 1. CUSTOM CURSOR
@@ -33,8 +38,9 @@ export default function Home() {
         gsap.to(cursorGlow, {
           x: e.clientX,
           y: e.clientY,
-          duration: 0.18,
+          duration: 0.22,
           overwrite: "auto",
+          ease: "power2.out",
         });
       };
       window.addEventListener("mousemove", onMouseMove);
@@ -55,26 +61,43 @@ export default function Home() {
         navbar.classList.toggle("scrolled", window.scrollY > 50);
       }
     };
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
 
     // 3. MOBILE MENU
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
-    const mobileLinks = document.querySelectorAll(".mobile-links a");
+    const mobileLinks = document.querySelectorAll(".mobile-links-a");
+    const menuItems = document.querySelectorAll(".mobile-nav-item");
+    const menuFooter = document.querySelector(".mobile-menu-footer");
     let isOpen = false;
     let toggleMenu;
     if (menuToggle && mobileMenu) {
       toggleMenu = () => {
         isOpen = !isOpen;
         mobileMenu.classList.toggle("active", isOpen);
+        menuToggle.classList.toggle("open", isOpen);
         document.body.style.overflow = isOpen ? "hidden" : "";
+
         const bars = menuToggle.querySelectorAll(".bar");
         if (isOpen) {
-          gsap.to(bars[0], { y: 7, rotate: 45, duration: 0.3 });
-          gsap.to(bars[1], { rotate: -45, duration: 0.3 });
+          // Animate hamburger to X
+          gsap.to(bars[0], { y: 6.5, rotate: 45, duration: 0.3, ease: "power2.inOut" });
+          gsap.to(bars[1], { rotate: -45, duration: 0.3, ease: "power2.inOut" });
+          // Stagger animate nav items in
+          gsap.fromTo(
+            menuItems,
+            { y: 30, opacity: 0, clipPath: "inset(0 0 100% 0)" },
+            { y: 0, opacity: 1, clipPath: "inset(0 0 0% 0)", stagger: 0.07, duration: 0.5, ease: "power3.out", delay: 0.15 }
+          );
+          if (menuFooter) {
+            gsap.fromTo(menuFooter, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.55 });
+          }
         } else {
-          gsap.to(bars[0], { y: 0, rotate: 0, duration: 0.3 });
-          gsap.to(bars[1], { rotate: 0, duration: 0.3 });
+          // Animate X back to hamburger
+          gsap.to(bars[0], { y: 0, rotate: 0, duration: 0.3, ease: "power2.inOut" });
+          gsap.to(bars[1], { rotate: 0, duration: 0.3, ease: "power2.inOut" });
+          gsap.to(menuItems, { y: -10, opacity: 0, duration: 0.2, stagger: 0.03, ease: "power2.in" });
+          if (menuFooter) gsap.to(menuFooter, { opacity: 0, duration: 0.15 });
         }
       };
       menuToggle.addEventListener("click", toggleMenu);
@@ -146,14 +169,16 @@ export default function Home() {
             trigger: ".showcase-section",
             start: "top top",
             end: "+=500%",
-            scrub: 0.5,
+            scrub: 1.2,
             pin: true,
             anticipatePin: 1,
+            fastScrollEnd: true,
+            preventOverlaps: true,
             snap: {
               snapTo: 1 / (TOTAL - 1),
-              duration: { min: 0.1, max: 0.4 },
-              delay: 0.05,
-              ease: "power2.out"
+              duration: { min: 0.15, max: 0.5 },
+              delay: 0.08,
+              ease: "power2.inOut"
             },
             onUpdate: (self) => {
               const progress = self.progress;
@@ -337,16 +362,18 @@ export default function Home() {
       document.querySelectorAll(".atm-band").forEach((band) => {
         const img = band.querySelector(".atm-band-img");
         const speed = parseFloat(band.dataset.speed) || 1;
+        // Use transform only (compositor thread) — no layout
         gsap.fromTo(
           img,
-          { yPercent: (speed - 1) * -20 },
+          { yPercent: (speed - 1) * -15 },
           {
-            yPercent: (speed - 1) * 20,
+            yPercent: (speed - 1) * 15,
             scrollTrigger: {
               trigger: band,
               start: "top bottom",
               end: "bottom top",
-              scrub: true,
+              scrub: 1.5,
+              fastScrollEnd: true,
             },
             ease: "none",
           }
@@ -358,11 +385,11 @@ export default function Home() {
             opacity: 1,
             scrollTrigger: {
               trigger: band,
-              start: "top 85%",
-              end: "top 50%",
+              start: "top 88%",
+              end: "top 55%",
               scrub: false,
             },
-            duration: 0.8,
+            duration: 0.6,
             ease: "power2.out",
           }
         );
@@ -417,42 +444,56 @@ export default function Home() {
       document.querySelectorAll(".section-title, .atm-header .section-title").forEach((el) => {
         gsap.fromTo(
           el,
-          { opacity: 0, y: 30, clipPath: "inset(0 0 100% 0)" },
+          { opacity: 0, y: 24, clipPath: "inset(0 0 100% 0)" },
           {
             opacity: 1,
             y: 0,
             clipPath: "inset(0 0 0% 0)",
-            scrollTrigger: { trigger: el, start: "top 85%", scrub: false },
-            duration: 0.9,
-            ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 88%", scrub: false },
+            duration: 0.75,
+            ease: "power2.out",
           }
         );
       });
+
+      // 13. BATCH REFRESH — ensures all triggers are correct after layout
+      ScrollTrigger.refresh();
     });
 
     // 6. PRODUCT PARTICLE CANVASES (per product)
     const canvasCleanups = [];
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
     document.querySelectorAll(".particle-canvas").forEach((canvas) => {
       const type = canvas.dataset.type;
-      const ctx = canvas.getContext("2d");
+      const ctx = canvas.getContext("2d", { alpha: true });
       if (!ctx) return;
       let particles = [];
       let raf;
+      let isVisible = false;
+
+      // IntersectionObserver — only animate when visible
+      const observer = new IntersectionObserver(
+        (entries) => { isVisible = entries[0].isIntersecting; },
+        { threshold: 0.1 }
+      );
+      observer.observe(canvas);
 
       const resize = () => {
         canvas.width = canvas.offsetWidth || 400;
         canvas.height = canvas.offsetHeight || 500;
       };
       resize();
-      window.addEventListener("resize", resize);
+      window.addEventListener("resize", resize, { passive: true });
 
       const W = () => canvas.width;
       const H = () => canvas.height;
 
       const createParticles = () => {
         particles = [];
-        const n =
-          type === "espresso"
+        // Reduce count on mobile for performance
+        const multiplier = isMobile ? 0.5 : 1;
+        const n = Math.round(
+          (type === "espresso"
             ? 18
             : type === "latte"
             ? 14
@@ -462,7 +503,8 @@ export default function Home() {
             ? 20
             : type === "dessert"
             ? 16
-            : 22;
+            : 22) * multiplier
+        );
         for (let i = 0; i < n; i++) {
           const p = {
             x: Math.random() * W(),
@@ -516,6 +558,8 @@ export default function Home() {
       };
 
       const animate = () => {
+        raf = requestAnimationFrame(animate);
+        if (!isVisible) return; // skip paint when off-screen
         ctx.clearRect(0, 0, W(), H());
         particles.forEach((p) => {
           p.x += p.speedX;
@@ -532,13 +576,13 @@ export default function Home() {
           }
           drawParticle(p);
         });
-        raf = requestAnimationFrame(animate);
       };
       animate();
 
       canvasCleanups.push(() => {
         window.removeEventListener("resize", resize);
         cancelAnimationFrame(raf);
+        observer.disconnect();
       });
     });
 
@@ -751,12 +795,12 @@ export default function Home() {
       <div className="custom-cursor-glow" id="cursor-glow"></div>
 
       {/* Navbar */}
-      <nav className="navbar" id="navbar">
+      <nav className="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div className="nav-inner">
           <a href="#home" className="nav-logo">
             <img
               src="/assets/logo.jpg"
-              alt="Underground 11"
+              alt="Underground 11 Coffee Bar Logo"
               className="nav-logo-img"
             />
             <span className="nav-logo-text">
@@ -764,37 +808,17 @@ export default function Home() {
             </span>
           </a>
           <ul className="nav-links" id="nav-links">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#menu">Menu</a>
-            </li>
-            <li>
-              <a href="#atmosphere">Atmosphere</a>
-            </li>
-            <li>
-              <a href="#gallery">Gallery</a>
-            </li>
-            <li>
-              <a href="#reviews">Reviews</a>
-            </li>
-            <li>
-              <a href="#visit">Visit</a>
-            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#atmosphere">Atmosphere</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#visit">Visit</a></li>
           </ul>
           <div className="nav-right">
-            <a href="#merch" className="nav-cta nav-cta-secondary" style={{ marginRight: "12px" }}>
-              Shop Merch
-            </a>
-            <a href="#visit" className="nav-cta">
-              Reserve a Table
-            </a>
-            <button
-              className="mobile-menu-toggle"
-              id="menu-toggle"
-              aria-label="Menu"
-            >
+            <a href="#merch" className="nav-cta-secondary" style={{ marginRight: "8px" }}>Shop Merch</a>
+            <a href="#visit" className="nav-cta">Reserve a Table</a>
+            <button className="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
               <span className="bar"></span>
               <span className="bar"></span>
             </button>
@@ -802,38 +826,50 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
-      <div className="mobile-menu" id="mobile-menu">
-        <div className="mobile-menu-inner">
+      {/* Mobile Menu — Full-screen overlay, sits below the fixed navbar */}
+      <div className="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div className="mm-bg-glow"></div>
+        <div className="mm-grain"></div>
+
+        {/* Navigation links */}
+        <nav className="mobile-menu-inner" aria-label="Mobile navigation">
           <ul className="mobile-links">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#menu">Menu</a>
-            </li>
-            <li>
-              <a href="#atmosphere">Atmosphere</a>
-            </li>
-            <li>
-              <a href="#merch">Merchandise</a>
-            </li>
-            <li>
-              <a href="#gallery">Gallery</a>
-            </li>
-            <li>
-              <a href="#reviews">Reviews</a>
-            </li>
-            <li>
-              <a href="#visit">Visit</a>
-            </li>
+            {["About","Menu","Atmosphere","Merchandise","Gallery","Reviews","Visit"].map((item, i) => (
+              <li key={item} className="mobile-nav-item">
+                <a href={`#${item.toLowerCase()}`} className="mobile-links-a">
+                  <span className="mm-item-num">0{i + 1}</span>
+                  <span className="mm-item-label">{item}</span>
+                  <span className="mm-item-arrow"><i className="fas fa-arrow-right"></i></span>
+                </a>
+              </li>
+            ))}
           </ul>
-          <p className="mobile-menu-tag">Specialty Coffee · Handcrafted Brews · Cozy Vibes</p>
+        </nav>
+
+        {/* Footer section */}
+        <div className="mobile-menu-footer">
+          <div className="mm-footer-row">
+            <a
+              href="#visit"
+              className="mm-cta-btn mm-cta-primary mobile-links-a"
+              style={{ background: 'var(--accent)', borderColor: 'var(--accent)', color: '#000' }}
+            >
+              Reserve a Table
+            </a>
+            <a href="#merch" className="mm-cta-btn mm-cta-secondary mobile-links-a">
+              Shop Merch
+            </a>
+          </div>
+          <p className="mm-tagline">Specialty Coffee · Handcrafted Brews · Cozy Vibes</p>
         </div>
       </div>
 
+      {/* Skip link for accessibility */}
+      <a href="#main-content" className="sr-only-skip" style={{position:'absolute',left:'-9999px',top:'auto',width:'1px',height:'1px',overflow:'hidden'}}>Skip to main content</a>
+
       {/* SECTION 1: HERO */}
-      <header className="hero" id="home">
+      <main id="main-content">      
+      <header className="hero" id="home" role="banner" aria-label="Underground 11 Coffee Bar hero">
         <video className="hero-video" autoPlay loop muted playsInline>
           <source src="/assets/hero_underground.mp4" type="video/mp4" />
         </video>
@@ -896,7 +932,7 @@ export default function Home() {
       </header>
 
       {/* SECTION: ABOUT */}
-      <section className="about-section" id="about">
+      <section className="about-section" id="about" aria-label="About Underground 11">
         <div className="about-glow-backdrop"></div>
         <div className="about-grid">
           <div className="about-content">
@@ -988,8 +1024,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 2: PRODUCT SHOWCASE */}
-      <section className="showcase-section" id="menu">
+      {/* SECTION 2: PRODUCT SHOWCASE / MENU */}
+      <section className="showcase-section" id="menu" aria-label="Our signature drinks menu">
         <div className="showcase-stage" id="showcase-stage">
           <div className="showcase-sidebar">
             <div className="sidebar-timeline">
@@ -1322,7 +1358,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 3: ATMOSPHERE */}
-      <section className="atmosphere-section" id="atmosphere">
+      <section className="atmosphere-section" id="atmosphere" aria-label="Cafe atmosphere and space">
         <div className="atm-header">
           <span className="section-eyebrow">The Space</span>
           <h2 className="section-title">Feel the <em>UNDERGROUND</em></h2>
@@ -1337,11 +1373,11 @@ export default function Home() {
           <div className="atm-band" data-speed="1.08">
             <div
               className="atm-band-blur"
-              style={{ backgroundImage: "url('/assets/atm_counter.jpg')" }}
+              style={{ backgroundImage: "url('/assets/NEW.jpeg')" }}
             ></div>
             <div className="atm-band-img-wrap">
               <img
-                src="/assets/atm_counter.jpg"
+                src="/assets/NEW.jpeg"
                 alt="The Bar Counter"
                 className="atm-band-img"
               />
@@ -1381,11 +1417,11 @@ export default function Home() {
           <div className="atm-band" data-speed="1.05">
             <div
               className="atm-band-blur"
-              style={{ backgroundImage: "url('/assets/atm_barista_wide.jpg')" }}
+              style={{ backgroundImage: "url('/assets/NEW.jpeg')" }}
             ></div>
             <div className="atm-band-img-wrap">
               <img
-                src="/assets/atm_barista_wide.jpg"
+                src="/assets/NEW.jpeg"
                 alt="The Display Showcase"
                 className="atm-band-img"
               />
@@ -1434,7 +1470,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 3.5: MERCHANDISE */}
-      <section className="merch-section" id="merch">
+      <section className="merch-section" id="merch" aria-label="Underground 11 merchandise">
         <div className="merch-header">
           <span className="section-eyebrow">The Gear</span>
           <h2 className="section-title">UNDERGROUND <em>Merch</em></h2>
@@ -1498,7 +1534,7 @@ export default function Home() {
                   Premium heavyweight white cotton tee featuring our signature navigation maze graphic.
                 </p>
                 <a
-                  href={`https://wa.me/910000000000?text=${encodeURIComponent(
+                  href={`https://wa.me/919916849328?text=${encodeURIComponent(
                     `I am interested in the Going Underground Tee in size ${goingUndergroundSize}`
                   )}`}
                   target="_blank"
@@ -1540,7 +1576,7 @@ export default function Home() {
                   Super-soft washed black cotton tee featuring the custom hypnotic swirl espresso art.
                 </p>
                 <a
-                  href={`https://wa.me/910000000000?text=${encodeURIComponent(
+                  href={`https://wa.me/919916849328?text=${encodeURIComponent(
                     `I am interested in the Hypnotic Brew Tee in size ${hypnoticBrewSize}`
                   )}`}
                   target="_blank"
@@ -1573,7 +1609,7 @@ export default function Home() {
                 <p className="merch-desc">
                   Dad hats and limited accessories. Ask at the counter to view our full rack items.
                 </p>
-                <a href="https://wa.me/910000000000?text=I%20am%20interested%20in%20the%20Signature%20Gear%20Collection" target="_blank" rel="noopener noreferrer" className="merch-buy-btn">
+                <a href="https://wa.me/919916849328?text=I%20am%20interested%20in%20the%20Signature%20Gear%20Collection" target="_blank" rel="noopener noreferrer" className="merch-buy-btn">
                   Inquire Store <i className="fab fa-whatsapp"></i>
                 </a>
               </div>
@@ -1583,7 +1619,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 4: GALLERY */}
-      <section className="gallery-section" id="gallery">
+      <section className="gallery-section" id="gallery" aria-label="Photo gallery of Underground 11">
         <div className="gallery-header">
           <span className="section-eyebrow">Life at UNDERGROUND</span>
           <h2 className="section-title">Our <em>Gallery</em></h2>
@@ -1754,7 +1790,7 @@ export default function Home() {
       </section>
 
       {/* SECTION: CLIENT REVIEWS */}
-      <section className="reviews-section" id="reviews">
+      <section className="reviews-section" id="reviews" aria-label="Customer reviews">
         <div className="reviews-header">
           <span className="section-eyebrow">Reviews</span>
           <h2 className="section-title">Client <em>Reviews</em></h2>
@@ -1833,7 +1869,7 @@ export default function Home() {
       </section>
 
       {/* SECTION 5: VISIT */}
-      <section className="visit-section" id="visit">
+      <section className="visit-section" id="visit" aria-label="Visit Underground 11 — location and hours">
         <div className="visit-watermark">UNDERGROUND 11</div>
 
         <div className="visit-inner">
@@ -1959,7 +1995,7 @@ export default function Home() {
                   <i className="fab fa-instagram"></i>
                 </a>
                 <a
-                  href="https://wa.me/910000000000"
+                  href="https://wa.me/919916849328"
                   target="_blank"
                   className="social-icon-btn wa-btn"
                   aria-label="WhatsApp"
@@ -2031,6 +2067,7 @@ export default function Home() {
           <span>© 2025 UNDERGROUND 11 Coffee Bar. All rights reserved.</span>
         </div>
       </footer>
+      </main>
     </>
   );
 }
