@@ -1413,30 +1413,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 3. Display Showcase */}
-          <div className="atm-band" data-speed="1.05">
-            <div
-              className="atm-band-blur"
-              style={{ backgroundImage: "url('/assets/NEW.jpeg')" }}
-            ></div>
-            <div className="atm-band-img-wrap">
-              <img
-                src="/assets/NEW.jpeg"
-                alt="The Display Showcase"
-                className="atm-band-img"
-              />
-            </div>
-            <div className="atm-band-overlay">
-              <div className="atm-led-line"></div>
-              <div className="atm-amber-leak"></div>
-            </div>
-            <div className="atm-band-caption">
-              <span>The Display Showcase</span>
-            </div>
-          </div>
-
           {/* 4. Brew Shelves */}
-          <div className="atm-band atm-band-right" data-speed="0.95">
+          <div className="atm-band" data-speed="0.95">
             <div
               className="atm-band-blur"
               style={{ backgroundImage: "url('/assets/atm_shelves.jpg')" }}
