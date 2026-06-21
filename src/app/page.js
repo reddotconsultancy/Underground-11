@@ -1926,7 +1926,7 @@ export default function Home() {
               <div className="hours-list">
                 <div className="hours-row">
                   <span>Monday</span>
-                  <span style={{ color: "var(--accent)" }}>Closed</span>
+                  <span>10:00 AM – 8:30 PM</span>
                 </div>
                 <div className="hours-row">
                   <span>Tuesday</span>

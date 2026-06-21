@@ -144,7 +144,7 @@ export default function RootLayout({ children }) {
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "10:00",
         "closes": "20:30",
       },
@@ -153,12 +153,6 @@ export default function RootLayout({ children }) {
         "dayOfWeek": ["Sunday"],
         "opens": "10:30",
         "closes": "20:30",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday"],
-        "opens": "00:00",
-        "closes": "00:00",
       },
     ],
     "aggregateRating": {
